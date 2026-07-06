@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>YouTube Karaoke Player — Case Study · Christian De Asis</title>
+<meta name="description" content="A stripped-down karaoke experience built on YouTube — a shared song queue, host controls, and a dedicated big-screen TV display mode for the whole room.">
+<meta name="theme-color" content="#0c0c12">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="../styles/portfolio.css?v=2">
+</head>
+<body>
+<div class="progress"></div>
+<div class="noise"></div>
+<header class="nav">
+  <div class="container nav-inner">
+    <a href="../index.html" class="logo" aria-label="Christian De Asis — home">
+      <span class="logo-mark">CD</span>
+      <span class="hide-mobile">Christian&nbsp;De&nbsp;Asis</span>
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="../index.html#work">Work</a>
+      <a href="../index.html#skills">Stack</a>
+      <a href="../index.html#about">About</a>
+      <a href="../index.html#contact">Contact</a>
+    </nav>
+    <div class="nav-right">
+      <button class="theme-toggle" data-theme-toggle aria-label="Toggle color theme"><svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/></svg><svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M5 5l1.5 1.5M17.5 17.5 19 19M19 5l-1.5 1.5M6.5 17.5 5 19"/></svg></button>
+      <a href="../index.html#contact" class="btn btn-primary btn-sm hide-mobile" data-magnetic="0.3">Let&rsquo;s talk</a>
+    </div>
+  </div>
+</header>
+<main>
+
+<section class="cs-hero">
+  <div class="hero-mesh" aria-hidden="true" style="opacity:.5"></div>
+  <div class="bg-grid" aria-hidden="true"></div>
+  <div class="container" style="position:relative;z-index:1">
+    <a href="../index.html#work" class="cs-back" data-reveal><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 6l-6 6 6 6"/></svg> All work</a>
+    <div data-reveal style="--reveal-delay:.06s;margin-top:1.4rem"><span class="chip"><span class="chip-dot"></span>Media App</span></div>
+    <h1 class="cs-title" data-reveal style="--reveal-delay:.1s">YouTube Karaoke Player</h1>
+    <p class="cs-tagline" data-reveal style="--reveal-delay:.16s">A stripped-down karaoke experience built on YouTube — a shared song queue, host controls, and a dedicated big-screen TV display mode for the whole room.</p>
+    <div class="cs-facts" data-reveal><div class="fact"><span class="k">Role</span><span class="v">Design + Build</span></div><div class="fact"><span class="k">Timeline</span><span class="v">2024</span></div><div class="fact"><span class="k">Type</span><span class="v">Realtime web app</span></div><div class="fact"><span class="k">Stack</span><span class="v">React · YouTube API · WebSockets</span></div></div>
+    <div class="cs-cover" data-reveal data-reveal-clip style="--reveal-delay:.1s">
+      <div class="mockup">
+        <div class="mockup-bar"><i></i><i></i><i></i><span class="url">karaoke.tv</span></div>
+        <div class="mockup-canvas"><div class="glow-orb" style="background:var(--cyan);opacity:.45;width:50%;height:60%"></div><span class="mockup-label">product shot · TV display mode</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cs-section">
+  <div class="container">
+    <div class="cs-layout">
+      <aside class="cs-aside" data-reveal>
+        <span class="kicker">01 — Overview</span>
+        <p>The problem worth solving, and who it was for.</p>
+      </aside>
+      <div class="cs-prose" data-reveal style="--reveal-delay:.08s">
+        <h4>The problem</h4>
+        <p>Karaoke night dies in the setup. Someone hunts for the video, someone else shouts out the next song, and the &ldquo;queue&rdquo; is a mental list that nobody agrees on. Existing apps demand sign-ups and subscriptions for what should be a five-second join.</p>
+        <p>I wanted a karaoke app with <strong>zero friction to join, a queue everyone can see, and a TV that just plays</strong> — phones become remotes, the big screen becomes the stage.</p>
+        <div class="cs-callout"><p class="q">&ldquo;The best party software is invisible. You open it, you sing, you never think about the app again.&rdquo;</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="cs-section">
+  <div class="container">
+    <div class="cs-layout">
+      <aside class="cs-aside" data-reveal>
+        <span class="kicker">02 — Approach</span>
+        <p>Key product and engineering decisions.</p>
+      </aside>
+      <div class="cs-prose" data-reveal style="--reveal-delay:.08s">
+        <h4>Two screens, one source of truth</h4>
+        <p>The architecture splits into a controller (your phone) and a display (the TV). Both subscribe to one shared session over WebSockets, so adding a song on any phone updates the queue everywhere instantly — no refresh, no host bottleneck.</p>
+        <h4>No accounts, ever</h4>
+        <p>A session is a room code. Scan, name yourself, start queuing. I deliberately removed every step between &ldquo;I want to sing&rdquo; and singing.</p>
+        <ul class="bullets"><li>Collaborative realtime queue synced across all devices</li><li>Dedicated TV display mode with a lyrics-forward layout</li><li>Host controls: reorder, skip, lock the queue</li><li>Built directly on the YouTube IFrame Player API</li></ul>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="cs-section">
+  <div class="container">
+    <div class="cs-layout">
+      <aside class="cs-aside" data-reveal>
+        <span class="kicker">03 — How it works</span>
+        <p>The shape of the system, at a glance.</p>
+      </aside>
+      <div class="cs-prose" data-reveal style="--reveal-delay:.08s">
+        <p>Two surfaces — a phone remote and a big-screen TV — share one realtime session. The single rule that makes it work: the session is the source of truth, so a song added on any phone updates the queue everywhere at once, with no host stuck playing DJ.</p>
+        <p>The TV stays authoritative for playback while remotes only send intent — queue, skip, reorder. That one decision is what keeps a room full of phones from fighting over the big screen.</p>
+        <div class="cs-imgrow two"><div class="cs-frame"><div class="mockup"><div class="mockup-bar"><i></i><i></i><i></i><span class="url">karaoke.tv/display</span></div><div class="mockup-canvas"><div class="glow-orb" style="background:var(--cyan);opacity:.4;width:55%;height:55%"></div><span class="mockup-label">TV display</span></div></div></div><div class="cs-frame"><div class="mockup"><div class="mockup-bar"><i></i><i></i><i></i><span class="url">karaoke.tv/remote</span></div><div class="mockup-canvas"><div class="glow-orb" style="background:var(--violet-bright);opacity:.4;width:55%;height:55%"></div><span class="mockup-label">phone remote</span></div></div></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="cs-section">
+  <div class="container">
+    <div class="cs-layout">
+      <aside class="cs-aside" data-reveal>
+        <span class="kicker">04 — Results</span>
+        <p>What the build delivered.</p>
+      </aside>
+      <div class="cs-prose" data-reveal style="--reveal-delay:.08s">
+        <div class="cs-metrics"><div class="m"><span class="v">Realtime</span><span class="l">Shared queue sync</span></div><div class="m"><span class="v">2-screen</span><span class="l">Remote + TV</span></div><div class="m"><span class="v">0</span><span class="l">Sign-up friction</span></div><div class="m"><span class="v">Instant</span><span class="l">Room join</span></div></div>
+        <p>The payoff is a karaoke night that runs itself. Guests join in seconds, the queue stays fair because everyone can see it, and the TV is a proper stage instead of someone&rsquo;s laptop balanced on a chair. It&rsquo;s the kind of product where the engineering disappears into the experience.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cs-next">
+  <div class="container">
+    <a href="triage.html" data-reveal data-magnetic="0.08">
+      <div>
+        <span class="lbl">Next project</span>
+        <div class="nm">Intercom Triage App <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></div>
+      </div>
+      <span class="chip">AI Agent</span>
+    </a>
+  </div>
+</section>
+
+</main>
+<footer class="footer">
+  <div class="container">
+    <div style="overflow:hidden"><div class="footer-big">LET&rsquo;S BUILD</div></div>
+    <div class="footer-bottom">
+      <span class="muted">© <span data-year></span> Christian De Asis — built with taste + AI velocity.</span>
+      <div class="footer-links">
+        <a href="https://www.linkedin.com/in/christian-de-asis-0092412aa/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="mailto:cdeasis923@gmail.com">Email</a>
+        <a href="../index.html">Home ↑</a>
+      </div>
+    </div>
+  </div>
+</footer>
+<script src="../scripts/portfolio.js?v=2"></script>
+</body>
+</html>

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dunly — Case Study · Christian De Asis</title>
+<meta name="description" content="Dunly catches every failed Stripe payment, opens a recovery case, and runs a timed email sequence with one-tap card-fix links — and heads off expiring cards before they ever fail.">
+<meta name="theme-color" content="#0c0c12">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="../styles/portfolio.css?v=2">
+</head>
+<body>
+<div class="progress"></div>
+<div class="noise"></div>
+<header class="nav">
+  <div class="container nav-inner">
+    <a href="../index.html" class="logo" aria-label="Christian De Asis — home">
+      <span class="logo-mark">CD</span>
+      <span class="hide-mobile">Christian&nbsp;De&nbsp;Asis</span>
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="../index.html#work">Work</a>
+      <a href="../index.html#skills">Stack</a>
+      <a href="../index.html#about">About</a>
+      <a href="../index.html#contact">Contact</a>
+    </nav>
+    <div class="nav-right">
+      <button class="theme-toggle" data-theme-toggle aria-label="Toggle color theme"><svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/></svg><svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M5 5l1.5 1.5M17.5 17.5 19 19M19 5l-1.5 1.5M6.5 17.5 5 19"/></svg></button>
+      <a href="../index.html#contact" class="btn btn-primary btn-sm hide-mobile" data-magnetic="0.3">Let&rsquo;s talk</a>
+    </div>
+  </div>
+</header>
+<main>
+
+<section class="cs-hero">
+  <div class="hero-mesh" aria-hidden="true" style="opacity:.5"></div>
+  <div class="bg-grid" aria-hidden="true"></div>
+  <div class="container" style="position:relative;z-index:1">
+    <a href="../index.html#work" class="cs-back" data-reveal><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 6l-6 6 6 6"/></svg> All work</a>
+    <div data-reveal style="--reveal-delay:.06s;margin-top:1.4rem"><span class="chip"><span class="chip-dot"></span>Billing SaaS</span></div>
+    <h1 class="cs-title" data-reveal style="--reveal-delay:.1s">Dunly</h1>
+    <p class="cs-tagline" data-reveal style="--reveal-delay:.16s">Dunly catches every failed Stripe payment, opens a recovery case, and runs a timed email sequence with one-tap card-fix links — and it heads off expiring cards before they ever fail.</p>
+    <div class="cs-facts" data-reveal><div class="fact"><span class="k">Role</span><span class="v">Solo — design &amp; build</span></div><div class="fact"><span class="k">Timeline</span><span class="v">2026</span></div><div class="fact"><span class="k">Type</span><span class="v">B2B SaaS · Stripe billing</span></div><div class="fact"><span class="k">Stack</span><span class="v">Express · Postgres · Stripe</span></div></div>
+    <div class="cs-cover" data-reveal data-reveal-clip style="--reveal-delay:.1s">
+      <div class="mockup">
+        <div class="mockup-bar"><i></i><i></i><i></i><span class="url">dunly.app/cases</span></div>
+        <div class="mockup-canvas has-shot">
+          <img class="shot" src="../screens/dunly-dunning-cover.png" alt="Dunly cases table — failed invoices with failure reasons, stage progress, and status badges" loading="lazy" width="2560" height="1494">
+          <span class="shot-badge">sample data</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cs-section">
+  <div class="container">
+    <div class="cs-layout">
+      <aside class="cs-aside" data-reveal>
+        <span class="kicker">01 — Overview</span>
+        <p>The problem worth solving, and who it was for.</p>
+      </aside>
+      <div class="cs-prose" data-reveal style="--reveal-delay:.08s">
+        <h4>The problem</h4>
+        <p>Subscription businesses lose real money to payments that fail for dumb reasons — an expired card, a hit credit limit, a routine bank decline. The customer never chose to leave; the charge just didn&rsquo;t clear. This is <em>involuntary</em> churn, and for most subscription companies it&rsquo;s 20&ndash;40% of all churn. Stripe&rsquo;s automatic retries claw some of it back, but they&rsquo;re silent: the customer never gets a clear, well-timed nudge to go fix their card. Stripe&rsquo;s built-in reminder emails are generic, unbranded, and not sequenced — so most small teams ship a single &ldquo;payment failed&rdquo; email and move on, because building real dunning in-house means webhook infrastructure, retry logic, deliverability work, and idempotency handling, none of which is their actual product.</p>
+        <p>The people this hurts most are exactly the ones least able to build it: indie and micro-SaaS founders on $1k&ndash;$50k MRR with a one-to-five-person team, and membership and creator businesses with high card-failure rates and non-technical owners. For them every recovered dollar matters and there&rsquo;s no spare engineer to chase it. Involuntary churn is the most recoverable revenue a SaaS has — the customer still wants the product — and it&rsquo;s the revenue most often left on the floor. <strong>Dunly turns every failed Stripe charge into a managed recovery case and walks the customer back to paid, and it catches expiring cards before they fail at all.</strong></p>
+        <div class="cs-callout"><p class="q">&ldquo;Most subscription churn isn&rsquo;t a decision — it&rsquo;s a declined card nobody followed up on.&rdquo;</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="cs-section">
+  <div class="container">
+    <div class="cs-layout">
+      <aside class="cs-aside" data-reveal>
+        <span class="kicker">02 — Approach</span>
+        <p>Key product and engineering decisions.</p>
+      </aside>
+      <div class="cs-prose" data-reveal style="--reveal-delay:.08s">
+        <h4>Decide whether to send at send time, not schedule time</h4>
+        <p>The naive design schedules every email when a case opens and trusts that schedule. I didn&rsquo;t trust it. The moment a case opens, the system schedules every touch ahead — but the worker that actually sends re-checks reality first: is the invoice still unpaid, is the Stripe connection still live, did the customer unsubscribe, has this stage already gone out? If the problem is already solved, the email is cancelled instead of sent. I chose this &ldquo;schedule-ahead, guard-at-send&rdquo; split because over-scheduling is cheap and safe, while sending one wrong email — to someone who already paid or already left — is the failure that loses trust. Correctness lives at the last possible moment.</p>
+        <h4>Make duplicate events impossible to act on twice</h4>
+        <p>Webhooks get redelivered; queues retry; networks hiccup. A dunning tool that double-charges a customer&rsquo;s inbox is worse than one that does nothing. So idempotency isn&rsquo;t a single check — it&rsquo;s layered, from the database up through the queue, the handler state guards, and the email provider&rsquo;s own dedupe key. Any one layer can fail and the customer still gets exactly one email per stage. The trade-off is more moving parts to reason about; the payoff is that &ldquo;exactly once&rdquo; holds even when the world misbehaves.</p>
+        <h4>Prevent the failure instead of only reacting to it</h4>
+        <p>Reacting to failed payments is table stakes. The more valuable half is pre-dunning: a scanner watches connected accounts for cards about to expire and runs a short prevention sequence before any charge fails. A failure you prevented costs nothing to recover, and prevention emails convert better than recovery emails. It&rsquo;s also why I kept the whole product deterministic — rules, not a model, in the money path — so a merchant can audit exactly why any email did or didn&rsquo;t send.</p>
+        <ul class="bullets"><li>Connect Stripe in one OAuth click — no API keys to copy — and recovery runs automatically from there.</li><li>A 4-touch recovery sequence plus a 2-touch pre-dunning sequence, branded per workspace, with one-tap links straight to fixing a card.</li><li>A six-state case tracker with automatic stop conditions (paid, canceled, disputed, unsubscribed, bounced) so it never chases a problem that&rsquo;s already solved.</li><li>A recovery dashboard that proves ROI — recovered value, recovery rate, and an honest voluntary-vs-involuntary churn split.</li></ul>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="cs-section">
+  <div class="container">
+    <div class="cs-layout">
+      <aside class="cs-aside" data-reveal>
+        <span class="kicker">03 — How it works</span>
+        <p>The shape of the system, at a glance.</p>
+      </aside>
+      <div class="cs-prose" data-reveal style="--reveal-delay:.08s">
+        <p>Dunly is one backend service organized in clear layers. An ingestion layer takes signature-verified webhooks from Stripe and acknowledges them fast — it stores the event and hands off, doing no real work in the request. A queue of background workers does the actual recovery: opening cases, scheduling the sequence, and sending. At the center is a case state machine — the single source of truth for where every failed invoice stands. A delivery layer renders branded emails and signs the one-tap portal and unsubscribe links.</p>
+        <p>The choice that keeps it simple: one Postgres database does double duty — it holds the data model <em>and</em> the job queue. No separate message broker, no Redis. Combined with the guard-at-send discipline, the whole thing runs as a single process against a single database and scales by adding workers, not services. (Held deliberately light here — this is unreleased work.)</p>
+        <div class="cs-imgrow two"><div class="cs-frame"><div class="mockup"><div class="mockup-bar"><i></i><i></i><i></i><span class="url">dunly.app/templates</span></div><div class="mockup-canvas has-shot"><img class="shot" src="../screens/dunly-dunning-a.png" alt="Dunly template editor — two-pane edit and live preview of a branded dunning email with merge variables" loading="lazy" width="2560" height="1494"></div></div></div><div class="cs-frame"><div class="mockup"><div class="mockup-bar"><i></i><i></i><i></i><span class="url">dunly.app/sequence</span></div><div class="mockup-canvas has-shot"><img class="shot" src="../screens/dunly-dunning-b.png" alt="Dunly recovery sequence — a 4-touch dunning timeline with per-stage delays and send windows" loading="lazy" width="2560" height="1494"></div></div></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="cs-section">
+  <div class="container">
+    <div class="cs-layout">
+      <aside class="cs-aside" data-reveal>
+        <span class="kicker">04 — Results</span>
+        <p>What the build delivered.</p>
+      </aside>
+      <div class="cs-prose" data-reveal style="--reveal-delay:.08s">
+        <div class="cs-metrics"><div class="m"><span class="v">6/6</span><span class="l">Build phases shipped</span></div><div class="m"><span class="v">6-state</span><span class="l">Case machine · 5 stop conditions</span></div><div class="m"><span class="v">Exactly-once</span><span class="l">Email delivery guarantee</span></div><div class="m"><span class="v">Pre-launch</span><span class="l">Live recovery rate pending</span></div></div>
+        <p>Dunly is built and verified end-to-end, but not yet live. Each phase passed against Stripe test mode and synthetic-event scripts, and the full loop — failure to case to sequence to portal to resolution — runs start to finish. What it doesn&rsquo;t have yet is production traffic, so the number that matters most — actual recovered revenue — stays open until launch. The build proves the hard part is done: reliable, idempotent, prevention-first dunning a Stripe business can connect in one click.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cs-next">
+  <div class="container">
+    <a href="entheos.html" data-reveal data-magnetic="0.08">
+      <div>
+        <span class="lbl">Next project</span>
+        <div class="nm">Entheos <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></div>
+      </div>
+      <span class="chip">Marketplace</span>
+    </a>
+  </div>
+</section>
+
+</main>
+<footer class="footer">
+  <div class="container">
+    <div style="overflow:hidden"><div class="footer-big">LET&rsquo;S BUILD</div></div>
+    <div class="footer-bottom">
+      <span class="muted">© <span data-year></span> Christian De Asis — built with taste + AI velocity.</span>
+      <div class="footer-links">
+        <a href="https://www.linkedin.com/in/christian-de-asis-0092412aa/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="mailto:cdeasis923@gmail.com">Email</a>
+        <a href="../index.html">Home ↑</a>
+      </div>
+    </div>
+  </div>
+</footer>
+<script src="../scripts/portfolio.js?v=2"></script>
+</body>
+</html>

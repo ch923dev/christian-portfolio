@@ -1,0 +1,15 @@
+# Secrets — local MCP auth tokens, never publish
+.mcp.json
+opencode.json
+
+# Local tooling / editor state
+.claude/
+.canvas/
+.impeccable/
+
+# Case-study drafting source (internal notes, TODO-confirm items)
+intake/
+
+# OS / misc
+Thumbs.db
+.DS_Store
