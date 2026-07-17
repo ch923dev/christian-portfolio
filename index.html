@@ -3,16 +3,17 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Christian De Asis — AI Vibe Coder & Web Developer</title>
-<meta name="description" content="Christian De Asis is a web developer and AI vibe coder turning prompts into production-ready software. Selected work: Entheos, YouTube Karaoke Player, Intercom Triage, Canvas ADE.">
+<title>Christian De Asis — Backend Developer</title>
+<meta name="description" content="Backend developer building production systems: webhook pipelines, job queues, state machines, payments. Five products built end-to-end, AI-accelerated and hand-verified.">
 <meta name="author" content="Christian De Asis">
-<meta property="og:title" content="Christian De Asis — AI Vibe Coder & Web Developer">
-<meta property="og:description" content="Turning prompts into production-ready software.">
+<meta property="og:title" content="Christian De Asis — Backend Developer">
+<meta property="og:description" content="Production systems, shipped fast. Webhook pipelines, job queues, state machines, payments. AI-accelerated, hand-verified.">
 <meta property="og:type" content="website">
 <meta name="theme-color" content="#0c0c12">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%237c6cf0'/%3E%3Ctext x='32' y='42' font-family='Arial,sans-serif' font-size='28' font-weight='700' fill='%23fff' text-anchor='middle'%3ECD%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="styles/portfolio.css?v=2">
+<link rel="stylesheet" href="styles/portfolio.css?v=3">
 </head>
 <body>
 <div class="progress"></div>
@@ -26,11 +27,11 @@
       <span class="hide-mobile">Christian&nbsp;De&nbsp;Asis</span>
     </a>
     <nav class="nav-links" aria-label="Primary">
-      <a href="#work"><span class="num">01</span>Work</a>
-      <a href="#skills"><span class="num">02</span>Stack</a>
-      <a href="#timeline"><span class="num">03</span>Journey</a>
-      <a href="#about"><span class="num">04</span>About</a>
-      <a href="#contact"><span class="num">05</span>Contact</a>
+      <a href="#work">Work</a>
+      <a href="#skills">Stack</a>
+      <a href="#timeline">Journey</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
     </nav>
     <div class="nav-right">
       <button class="theme-toggle" data-theme-toggle aria-label="Toggle color theme">
@@ -45,11 +46,11 @@
 
 <!-- ============ MOBILE MENU ============ -->
 <div class="mobile-menu">
-  <a href="#work"><span class="num">01</span>Work</a>
-  <a href="#skills"><span class="num">02</span>Stack</a>
-  <a href="#timeline"><span class="num">03</span>Journey</a>
-  <a href="#about"><span class="num">04</span>About</a>
-  <a href="#contact"><span class="num">05</span>Contact</a>
+  <a href="#work">Work</a>
+  <a href="#skills">Stack</a>
+  <a href="#timeline">Journey</a>
+  <a href="#about">About</a>
+  <a href="#contact">Contact</a>
 </div>
 
 <main id="top">
@@ -64,20 +65,20 @@
     <div class="hero-grid">
       <div class="hero-left">
         <div data-reveal>
-          <span class="avail"><span class="pulse"><i></i></span>Available for freelance &amp; full-time</span>
+          <span class="avail"><span class="pulse"><i></i></span>Open to backend roles · full-time &amp; freelance</span>
         </div>
         <h1 data-reveal style="--reveal-delay:.08s">
-          I vibe-code <span class="gradient-text">products</span> at the speed of thought.
+          Backend developer.<span class="dim">Production systems, shipped fast.</span>
         </h1>
         <p class="lead hero-sub" data-reveal style="--reveal-delay:.16s">
-          I'm <strong style="color:var(--text)">Christian De Asis</strong> — a web developer &amp; AI-building enthusiast who turns prompts into production-ready software. I pair human taste with AI velocity to ship real products, fast.
+          I'm <strong style="color:var(--text)">Christian De Asis</strong>. I design the APIs, data models, and background jobs that keep products correct when networks retry and webhooks double-fire. AI tooling makes me fast; engineering judgment keeps it right.
         </p>
         <div class="hero-cta" data-reveal style="--reveal-delay:.24s">
           <a href="#work" class="btn btn-primary" data-magnetic="0.35">
             View selected work
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
           </a>
-          <a href="#contact" class="btn btn-ghost" data-magnetic="0.25">Start a project</a>
+          <a href="#contact" class="btn btn-ghost" data-magnetic="0.25">Get in touch</a>
         </div>
         <div class="hero-socials" data-reveal style="--reveal-delay:.3s">
           <a class="icon-link" href="https://www.linkedin.com/in/christian-de-asis-0092412aa/" target="_blank" rel="noopener" aria-label="LinkedIn">
@@ -86,27 +87,35 @@
           <a class="icon-link" href="mailto:cdeasis923@gmail.com" aria-label="Email">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
           </a>
-          <a class="icon-link" href="#work" aria-label="GitHub">
+          <a class="icon-link" href="https://github.com/ch923dev" target="_blank" rel="noopener" aria-label="GitHub">
             <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48l-.01-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.53 2.36 1.09 2.94.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.6 9.6 0 0 1 5 0c1.91-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.69-4.57 4.94.36.31.68.92.68 1.85l-.01 2.74c0 .27.18.58.69.48A10 10 0 0 0 12 2Z"/></svg>
           </a>
         </div>
       </div>
 
-      <!-- Prompt card -->
+      <!-- System card — real architecture from the lead build -->
       <div class="hero-right" data-reveal style="--reveal-delay:.2s">
-        <div class="prompt-card" data-magnetic="0.06">
-          <div class="prompt-top">
-            <span class="dots"><i></i><i></i><i></i></span>
-            <span class="file">build.prompt</span>
+        <div class="sys-card" data-magnetic="0.06">
+          <div class="sys-head">
+            <span class="sys-title">system · failed-payment recovery</span>
+            <span class="sys-tag"><i></i>verified end-to-end</span>
           </div>
-          <div class="prompt-body">
-            <div class="prompt-line"><span class="gut">01</span><span><span class="you">christian ›</span> <span data-type="ship a karaoke app with a live queue + TV display"></span><span class="caret"></span></span></div>
-            <div class="prompt-line"><span class="gut">02</span><span class="tok-fn">✦ generating</span></div>
-            <div class="prompt-line"><span class="gut">03</span><span><span class="tok-key">const</span> app = <span class="tok-fn">createProduct</span>({</span></div>
-            <div class="prompt-line"><span class="gut">04</span><span>&nbsp;&nbsp;stack: [<span class="tok-str">'react'</span>, <span class="tok-str">'node'</span>, <span class="tok-str">'ai'</span>],</span></div>
-            <div class="prompt-line"><span class="gut">05</span><span>&nbsp;&nbsp;taste: <span class="tok-key">true</span>, ship: <span class="tok-key">true</span></span></div>
-            <div class="prompt-line"><span class="gut">06</span><span>});</span></div>
-            <div class="prompt-line"><span class="gut">07</span><span class="tok-str">// → deployed in an afternoon ✓</span></div>
+          <div class="sys-body">
+            <span class="d-node"><span class="d-dot"></span>stripe webhook</span>
+            <span class="d-link"></span>
+            <span class="d-node">verify signature · store event</span>
+            <span class="d-link" style="--d-delay:.5s"></span>
+            <span class="d-node">job queue · postgres</span>
+            <span class="d-link" style="--d-delay:1s"></span>
+            <span class="d-node">guard-at-send checks</span>
+            <span class="d-note">invoice unpaid? · connection live? · not already sent?</span>
+            <span class="d-link" style="--d-delay:1.5s"></span>
+            <span class="d-node accent">send email · exactly once</span>
+            <div class="d-states" aria-hidden="true">
+              <span class="d-state on">open</span><span class="d-sep">→</span>
+              <span class="d-state">emailing</span><span class="d-sep">→</span>
+              <span class="d-state">recovered</span>
+            </div>
           </div>
         </div>
       </div>
@@ -121,22 +130,22 @@
 <!-- ============ TICKER ============ -->
 <div class="ticker" aria-hidden="true">
   <div class="ticker-track">
-    <span class="ticker-item">React<span class="star">✦</span></span>
-    <span class="ticker-item">Next.js<span class="star">✦</span></span>
+    <span class="ticker-item">PostgreSQL<span class="star">✦</span></span>
+    <span class="ticker-item">Node.js<span class="star">✦</span></span>
+    <span class="ticker-item">Express<span class="star">✦</span></span>
     <span class="ticker-item">TypeScript<span class="star">✦</span></span>
-    <span class="ticker-item">Node<span class="star">✦</span></span>
-    <span class="ticker-item">AI Agents<span class="star">✦</span></span>
-    <span class="ticker-item">Tailwind<span class="star">✦</span></span>
-    <span class="ticker-item">Supabase<span class="star">✦</span></span>
-    <span class="ticker-item">Vibe Coding<span class="star">✦</span></span>
+    <span class="ticker-item">Stripe API<span class="star">✦</span></span>
+    <span class="ticker-item">Webhooks<span class="star">✦</span></span>
+    <span class="ticker-item">Job Queues<span class="star">✦</span></span>
     <span class="ticker-item">React<span class="star">✦</span></span>
-    <span class="ticker-item">Next.js<span class="star">✦</span></span>
+    <span class="ticker-item">PostgreSQL<span class="star">✦</span></span>
+    <span class="ticker-item">Node.js<span class="star">✦</span></span>
+    <span class="ticker-item">Express<span class="star">✦</span></span>
     <span class="ticker-item">TypeScript<span class="star">✦</span></span>
-    <span class="ticker-item">Node<span class="star">✦</span></span>
-    <span class="ticker-item">AI Agents<span class="star">✦</span></span>
-    <span class="ticker-item">Tailwind<span class="star">✦</span></span>
-    <span class="ticker-item">Supabase<span class="star">✦</span></span>
-    <span class="ticker-item">Vibe Coding<span class="star">✦</span></span>
+    <span class="ticker-item">Stripe API<span class="star">✦</span></span>
+    <span class="ticker-item">Webhooks<span class="star">✦</span></span>
+    <span class="ticker-item">Job Queues<span class="star">✦</span></span>
+    <span class="ticker-item">React<span class="star">✦</span></span>
   </div>
 </div>
 
@@ -145,10 +154,10 @@
   <div class="container">
     <div class="section-head between" data-reveal>
       <div class="head-left">
-        <span class="kicker">01 — Selected Work</span>
-        <h2 style="margin-top:1rem">Products I designed, built, and shipped.</h2>
+        <span class="kicker">Selected work</span>
+        <h2 style="margin-top:1rem">Systems I designed, built, and verified.</h2>
       </div>
-      <p class="lead" style="max-width:34ch">Five real builds — each one prompt-driven, taste-tuned, and taken end-to-end from idea to interface.</p>
+      <p class="lead" style="max-width:34ch">Five real builds: webhook pipelines, realtime sync, payments, RAG. Each taken end-to-end from data model to interface.</p>
     </div>
 
     <div class="projects-list">
@@ -159,24 +168,24 @@
           <div class="mockup">
             <div class="mockup-bar"><i></i><i></i><i></i><span class="url">dunly.app</span></div>
             <div class="mockup-canvas has-shot">
-              <img class="shot" src="screens/dunly-dunning-card.png" alt="Dunly recovery dashboard — recovered value, recovery rate, and pre-dunning prevention" loading="lazy" width="2560" height="1494">
+              <img class="shot" src="screens/dunly-dunning-card.png" alt="Dunly recovery dashboard: recovered value, recovery rate, and pre-dunning prevention" loading="lazy" width="2560" height="1494">
               <span class="shot-badge">sample data</span>
             </div>
           </div>
         </a>
         <div class="project-body">
-          <span class="project-index">01 / Billing SaaS</span>
+          <span class="project-index">Billing SaaS · Backend</span>
           <h3>Dunly</h3>
-          <p class="project-desc">Automated dunning and failed-payment recovery for Stripe subscription businesses — it turns failed charges back into paid invoices without anyone lifting a finger.</p>
+          <p class="project-desc">Automated failed-payment recovery for Stripe subscription businesses. Signature-verified webhooks feed a Postgres job queue, and a six-state case machine walks every failed invoice back to paid.</p>
           <div class="project-meta">
-            <div class="metric"><span class="val">1-click</span><span class="lbl">Stripe connect</span></div>
-            <div class="metric"><span class="val">6-state</span><span class="lbl">Case tracker</span></div>
-            <div class="metric"><span class="val">Pre-dunning</span><span class="lbl">Stops failures early</span></div>
+            <div class="metric"><span class="val">4-layer</span><span class="lbl">Idempotency stack</span></div>
+            <div class="metric"><span class="val">6-state</span><span class="lbl">Case machine</span></div>
+            <div class="metric"><span class="val">Exactly-once</span><span class="lbl">Email delivery</span></div>
           </div>
           <div class="project-stack">
-            <span class="chip"><span class="chip-dot"></span>Stripe</span>
-            <span class="chip">React</span>
+            <span class="chip"><span class="chip-dot"></span>Express</span>
             <span class="chip">PostgreSQL</span>
+            <span class="chip">Stripe</span>
             <span class="chip">Resend</span>
           </div>
           <div class="project-actions">
@@ -188,18 +197,18 @@
       <!-- Entheos -->
       <article class="project" data-reveal>
         <div class="project-body">
-          <span class="project-index">02 / Marketplace</span>
+          <span class="project-index">Marketplace · Payments</span>
           <h3>Entheos</h3>
-          <p class="project-desc">A two-sided platform where homeowners connect with licensed electrical professionals and shop verified electrical supplies — all in one place.</p>
+          <p class="project-desc">A two-sided marketplace connecting homeowners with licensed electricians. One shared quote object both sides act on, with role-aware views and Stripe Connect split payments on top.</p>
           <div class="project-meta">
-            <div class="metric"><span class="val">2-in-1</span><span class="lbl">Hire + Shop</span></div>
-            <div class="metric"><span class="val">100%</span><span class="lbl">Licensed pros</span></div>
+            <div class="metric"><span class="val">2-sided</span><span class="lbl">One data model</span></div>
+            <div class="metric"><span class="val">Split</span><span class="lbl">Stripe Connect</span></div>
             <div class="metric"><span class="val">&lt;3s</span><span class="lbl">Quote flow</span></div>
           </div>
           <div class="project-stack">
             <span class="chip"><span class="chip-dot"></span>Next.js</span>
-            <span class="chip">Stripe</span>
             <span class="chip">Supabase</span>
+            <span class="chip">Stripe</span>
             <span class="chip">Maps API</span>
           </div>
           <div class="project-actions">
@@ -209,7 +218,18 @@
         <a href="work/entheos.html" class="project-media" aria-label="Open Entheos case study">
           <div class="mockup">
             <div class="mockup-bar"><i></i><i></i><i></i><span class="url">entheos.app</span></div>
-            <div class="mockup-canvas"><div class="glow-orb" style="background:var(--violet)"></div><span class="mockup-label">product shot · marketplace UI</span></div>
+            <div class="mockup-canvas">
+              <div class="diagram" aria-hidden="true">
+                <div class="d-row">
+                  <span class="d-node">homeowner</span><span class="d-hlink"></span>
+                  <span class="d-node accent">shared quote object</span>
+                  <span class="d-hlink"></span><span class="d-node">licensed pro</span>
+                </div>
+                <span class="d-link"></span>
+                <span class="d-node">stripe connect · split payment</span>
+                <span class="d-note">one primitive · two role-aware views</span>
+              </div>
+            </div>
           </div>
         </a>
       </article>
@@ -219,22 +239,34 @@
         <a href="work/karaoke.html" class="project-media" aria-label="Open YouTube Karaoke Player case study">
           <div class="mockup">
             <div class="mockup-bar"><i></i><i></i><i></i><span class="url">karaoke.tv</span></div>
-            <div class="mockup-canvas"><div class="glow-orb" style="background:var(--cyan)"></div><span class="mockup-label">product shot · TV + queue</span></div>
+            <div class="mockup-canvas">
+              <div class="diagram" aria-hidden="true">
+                <div class="d-row">
+                  <span class="d-node">phone remote</span>
+                  <span class="d-node">phone remote</span>
+                </div>
+                <span class="d-link"></span>
+                <span class="d-node accent">session · source of truth</span>
+                <span class="d-link" style="--d-delay:.6s"></span>
+                <span class="d-node">tv display · authoritative playback</span>
+                <span class="d-note">remotes send intent · websocket sync</span>
+              </div>
+            </div>
           </div>
         </a>
         <div class="project-body">
-          <span class="project-index">03 / Media App</span>
+          <span class="project-index">Media App · Realtime</span>
           <h3>YouTube Karaoke Player</h3>
-          <p class="project-desc">A stripped-down karaoke experience built on YouTube — collaborative song queue, host controls, and a dedicated big-screen TV display mode for the party.</p>
+          <p class="project-desc">Collaborative karaoke built on YouTube: one WebSocket session as the source of truth, phones as remotes that send intent, and a TV display that stays authoritative for playback.</p>
           <div class="project-meta">
-            <div class="metric"><span class="val">Real-time</span><span class="lbl">Shared queue</span></div>
-            <div class="metric"><span class="val">2-screen</span><span class="lbl">Remote + TV</span></div>
+            <div class="metric"><span class="val">Realtime</span><span class="lbl">WebSocket queue</span></div>
+            <div class="metric"><span class="val">2-screen</span><span class="lbl">One session state</span></div>
             <div class="metric"><span class="val">0</span><span class="lbl">Sign-up friction</span></div>
           </div>
           <div class="project-stack">
-            <span class="chip"><span class="chip-dot"></span>React</span>
+            <span class="chip"><span class="chip-dot"></span>WebSockets</span>
+            <span class="chip">React</span>
             <span class="chip">YouTube API</span>
-            <span class="chip">WebSockets</span>
             <span class="chip">Zustand</span>
           </div>
           <div class="project-actions">
@@ -246,19 +278,19 @@
       <!-- Triage -->
       <article class="project" data-reveal>
         <div class="project-body">
-          <span class="project-index">04 / AI Agent</span>
+          <span class="project-index">AI Agent · RAG</span>
           <h3>Intercom Triage App</h3>
-          <p class="project-desc">An AI agent that auto-categorizes incoming support tickets against a product's knowledge base — routing each conversation to the right team before a human ever reads it.</p>
+          <p class="project-desc">An AI agent that classifies incoming support tickets against a product's own knowledge base. Every decision is retrieval-grounded, confidence-scored, and routed before a human reads it.</p>
           <div class="project-meta">
             <div class="metric"><span class="val">~90%</span><span class="lbl">Auto-tag accuracy</span></div>
-            <div class="metric"><span class="val">Instant</span><span class="lbl">Routing</span></div>
-            <div class="metric"><span class="val">KB-aware</span><span class="lbl">Grounded</span></div>
+            <div class="metric"><span class="val">RAG</span><span class="lbl">KB-grounded</span></div>
+            <div class="metric"><span class="val">HITL</span><span class="lbl">Low-confidence fallback</span></div>
           </div>
           <div class="project-stack">
             <span class="chip"><span class="chip-dot"></span>Node</span>
             <span class="chip">LLM / RAG</span>
-            <span class="chip">Intercom API</span>
             <span class="chip">Vector DB</span>
+            <span class="chip">Intercom API</span>
           </div>
           <div class="project-actions">
             <a href="work/triage.html" class="link-arrow">Read case study <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></a>
@@ -267,7 +299,21 @@
         <a href="work/triage.html" class="project-media" aria-label="Open Intercom Triage case study">
           <div class="mockup">
             <div class="mockup-bar"><i></i><i></i><i></i><span class="url">triage.ai</span></div>
-            <div class="mockup-canvas"><div class="glow-orb" style="background:var(--indigo)"></div><span class="mockup-label">product shot · ticket pipeline</span></div>
+            <div class="mockup-canvas">
+              <div class="diagram" aria-hidden="true">
+                <span class="d-node">incoming ticket</span>
+                <span class="d-link"></span>
+                <span class="d-node">retrieve · product kb</span>
+                <span class="d-link" style="--d-delay:.6s"></span>
+                <span class="d-node accent">classify + confidence</span>
+                <span class="d-link" style="--d-delay:1.2s"></span>
+                <div class="d-row">
+                  <span class="d-node">auto-route</span>
+                  <span class="d-node">human review</span>
+                </div>
+                <span class="d-note">high confidence routes itself · low goes to a human</span>
+              </div>
+            </div>
           </div>
         </a>
       </article>
@@ -277,17 +323,29 @@
         <a href="work/canvas-ade.html" class="project-media" aria-label="Open Canvas ADE case study">
           <div class="mockup">
             <div class="mockup-bar"><i></i><i></i><i></i><span class="url">expanse.dev</span></div>
-            <div class="mockup-canvas"><div class="glow-orb" style="background:var(--violet-bright)"></div><span class="mockup-label">product shot · infinite canvas</span></div>
+            <div class="mockup-canvas">
+              <div class="diagram" aria-hidden="true">
+                <div class="d-row">
+                  <span class="d-node">agent · research</span><span class="d-hlink"></span><span class="d-node accent">agent · build</span>
+                </div>
+                <span class="d-link"></span>
+                <div class="d-row">
+                  <span class="d-node">fork · variant a</span>
+                  <span class="d-node">fork · variant b</span>
+                </div>
+                <span class="d-note">parallel agents as spatial nodes · infinite canvas</span>
+              </div>
+            </div>
           </div>
         </a>
         <div class="project-body">
-          <span class="project-index">05 / Dev Tooling</span>
+          <span class="project-index">Dev Tooling · Agents</span>
           <h3>Canvas ADE <span style="color:var(--text-faint);font-weight:400">(Expanse)</span></h3>
-          <p class="project-desc">An agentic development environment on an infinite canvas — spin up parallel AI agents as spatial nodes, branch ideas, and orchestrate whole build flows visually instead of in a single chat thread.</p>
+          <p class="project-desc">An agentic development environment on an infinite canvas: parallel AI agents as spatial nodes, where positions, branches, and connections are the program itself.</p>
           <div class="project-meta">
-            <div class="metric"><span class="val">∞</span><span class="lbl">Canvas workspace</span></div>
             <div class="metric"><span class="val">Multi-agent</span><span class="lbl">Parallel runs</span></div>
-            <div class="metric"><span class="val">Spatial</span><span class="lbl">Build flows</span></div>
+            <div class="metric"><span class="val">∞</span><span class="lbl">Canvas workspace</span></div>
+            <div class="metric"><span class="val">Branchable</span><span class="lbl">Saved flows</span></div>
           </div>
           <div class="project-stack">
             <span class="chip"><span class="chip-dot"></span>React</span>
@@ -311,98 +369,122 @@
   <div class="container" style="position:relative;z-index:1">
     <div class="section-head between" data-reveal>
       <div class="head-left">
-        <span class="kicker">02 — The Stack</span>
-        <h2 style="margin-top:1rem">A full toolkit, wired for velocity.</h2>
+        <span class="kicker">The stack</span>
+        <h2 style="margin-top:1rem">Built for the server side.</h2>
       </div>
-      <p class="lead" style="max-width:34ch">From pixel to pipeline — I work across the stack and let AI handle the toil so the craft gets the attention.</p>
+      <p class="lead" style="max-width:34ch">Backend and data first, with the full toolkit around it to take a product from schema to screen.</p>
     </div>
 
     <div class="skills-grid" data-stagger="0.07">
       <div class="skill-cell" data-reveal>
-        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="m7 8-4 4 4 4M17 8l4 4-4 4M14 4l-4 16"/></svg></div>
-        <span class="num">01</span>
-        <h3>Frontend</h3>
+        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3 9 5v8l-9 5-9-5V8l9-5Z"/><path d="m3 8 9 5 9-5M12 21V13"/></svg></div>
+        <h3>Backend &amp; Data</h3>
         <div class="skill-tags">
-          <span class="skill-tag">React</span><span class="skill-tag">Next.js</span><span class="skill-tag">TypeScript</span><span class="skill-tag">Tailwind</span><span class="skill-tag">Framer Motion</span>
+          <span class="skill-tag">Node.js</span><span class="skill-tag">Express</span><span class="skill-tag">PostgreSQL</span><span class="skill-tag">Prisma</span><span class="skill-tag">tRPC</span>
         </div>
       </div>
       <div class="skill-cell" data-reveal>
-        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3 9 5v8l-9 5-9-5V8l9-5Z"/><path d="m3 8 9 5 9-5M12 21V13"/></svg></div>
-        <span class="num">02</span>
-        <h3>Backend &amp; Data</h3>
+        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5c0 4.5-3 7.7-7 9-4-1.3-7-4.5-7-9V6l7-3Z"/><path d="m9 11.5 2 2 4-4"/></svg></div>
+        <h3>Reliability &amp; Integrations</h3>
         <div class="skill-tags">
-          <span class="skill-tag">Node</span><span class="skill-tag">Supabase</span><span class="skill-tag">Postgres</span><span class="skill-tag">tRPC</span><span class="skill-tag">REST / WS</span>
+          <span class="skill-tag">Stripe API</span><span class="skill-tag">Webhooks</span><span class="skill-tag">Job queues</span><span class="skill-tag">Idempotency</span><span class="skill-tag">OAuth</span>
         </div>
       </div>
       <div class="skill-cell" data-reveal>
         <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4M12 18v4M4.9 4.9l2.8 2.8M16.3 16.3l2.8 2.8M2 12h4M18 12h4"/><circle cx="12" cy="12" r="3.2"/></svg></div>
-        <span class="num">03</span>
-        <h3>AI &amp; Agents</h3>
+        <h3>AI &amp; RAG Systems</h3>
         <div class="skill-tags">
-          <span class="skill-tag">LLM apps</span><span class="skill-tag">RAG</span><span class="skill-tag">Agents</span><span class="skill-tag">Prompt eng.</span><span class="skill-tag">Vector DBs</span>
+          <span class="skill-tag">LLM apps</span><span class="skill-tag">RAG</span><span class="skill-tag">Agents</span><span class="skill-tag">Vector DBs</span><span class="skill-tag">Grounding</span>
         </div>
       </div>
       <div class="skill-cell" data-reveal>
-        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M3 9h18M9 21V9"/></svg></div>
-        <span class="num">04</span>
-        <h3>Design &amp; UX</h3>
+        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="m7 8-4 4 4 4M17 8l4 4-4 4M14 4l-4 16"/></svg></div>
+        <h3>Frontend</h3>
         <div class="skill-tags">
-          <span class="skill-tag">UI systems</span><span class="skill-tag">Figma</span><span class="skill-tag">Motion</span><span class="skill-tag">Prototyping</span><span class="skill-tag">A11y</span>
+          <span class="skill-tag">React</span><span class="skill-tag">Next.js</span><span class="skill-tag">TypeScript</span><span class="skill-tag">Tailwind</span><span class="skill-tag">Vite</span>
         </div>
       </div>
       <div class="skill-cell" data-reveal>
         <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.7l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.7l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/><path d="M7.5 4.2 12 6.8l4.5-2.6M3 7.3 12 12l9-4.7M12 22V12"/></svg></div>
-        <span class="num">05</span>
         <h3>DevOps &amp; Infra</h3>
         <div class="skill-tags">
-          <span class="skill-tag">Vercel</span><span class="skill-tag">Docker</span><span class="skill-tag">CI / CD</span><span class="skill-tag">Edge fns</span><span class="skill-tag">Git</span>
+          <span class="skill-tag">Docker</span><span class="skill-tag">Vercel</span><span class="skill-tag">CI / CD</span><span class="skill-tag">Git</span><span class="skill-tag">Edge fns</span>
         </div>
       </div>
       <div class="skill-cell" data-reveal>
-        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 3 14h8l-1 8 10-12h-8l1-8Z"/></svg></div>
-        <span class="num">06</span>
-        <h3>Vibe Workflow</h3>
+        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M3 9h18M9 21V9"/></svg></div>
+        <h3>Design &amp; UX</h3>
         <div class="skill-tags">
-          <span class="skill-tag">Cursor</span><span class="skill-tag">Claude</span><span class="skill-tag">v0</span><span class="skill-tag">Spec-driven</span><span class="skill-tag">Rapid ship</span>
+          <span class="skill-tag">UI systems</span><span class="skill-tag">Figma</span><span class="skill-tag">Motion</span><span class="skill-tag">A11y</span><span class="skill-tag">Prototyping</span>
         </div>
       </div>
     </div>
   </div>
 </section>
 
+<!-- ============ HOW I WORK ============ -->
+<section id="workflow" class="section-pad">
+  <div class="container">
+    <div class="section-head between" data-reveal>
+      <div class="head-left">
+        <span class="kicker">How I work</span>
+        <h2 style="margin-top:1rem">Spec. Build. Verify.</h2>
+      </div>
+      <p class="lead" style="max-width:36ch">The AI-accelerated loop behind every build. The speed comes from tooling; the correctness stays hand-owned.</p>
+    </div>
+    <div class="how-grid" data-stagger="0.08">
+      <div class="how-step" data-reveal>
+        <span class="step-no">01</span>
+        <h3>Spec the contract</h3>
+        <p>Data model, states, failure modes, and acceptance criteria, all written <strong>before any code</strong>. Most bugs die here, on paper.</p>
+      </div>
+      <div class="how-step" data-reveal>
+        <span class="step-no">02</span>
+        <h3>Build with AI leverage</h3>
+        <p>AI tooling generates the boilerplate at machine speed. Every architectural decision (<strong>schema, queue, state machine</strong>) stays mine. Days instead of weeks, and nothing outsourced but the typing.</p>
+      </div>
+      <div class="how-step" data-reveal>
+        <span class="step-no">03</span>
+        <h3>Verify against reality</h3>
+        <p>Synthetic events, Stripe test mode, redelivered webhooks, hostile edge cases. Nothing is "done" until <strong>the full loop runs end-to-end</strong>.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ============ TIMELINE ============ -->
-<section id="timeline" class="section-pad">
+<section id="timeline" class="section-pad" style="background:var(--bg-deep)">
   <div class="container">
     <div class="section-head" data-reveal>
-      <span class="kicker">03 — The Journey</span>
-      <h2 style="margin-top:1rem">From curiosity to shipping products.</h2>
-      <p class="lead" style="margin-top:.4rem">A short timeline of how I got here — and what I built along the way.</p>
+      <span class="kicker">The journey</span>
+      <h2 style="margin-top:1rem">From first build to production systems.</h2>
+      <p class="lead" style="margin-top:.4rem">A short timeline of how I got here, and what each build taught me.</p>
     </div>
 
     <div class="timeline" data-stagger="0.06">
       <div class="tl-item" data-reveal>
         <div class="tl-head"><span class="tl-year">2026</span><span class="tl-role">Dunly — Stripe dunning SaaS</span><span class="tl-org">Solo / Builder</span></div>
-        <p class="tl-desc">Designed and built a prevention-first failed-payment recovery tool for Stripe subscription businesses — idempotent dunning sequences, a six-state case machine, and pre-dunning that heads off expiring cards before they fail.</p>
-        <div class="tl-tags"><span class="chip">Stripe</span><span class="chip">SaaS</span><span class="chip">Billing</span></div>
+        <p class="tl-desc">Built a prevention-first failed-payment recovery system: signature-verified webhook ingestion, a Postgres-backed job queue, a six-state case machine, and four layers of idempotency so every customer gets exactly one email per stage.</p>
+        <div class="tl-tags"><span class="chip">Stripe</span><span class="chip">Postgres</span><span class="chip">Queues</span></div>
       </div>
       <div class="tl-item" data-reveal>
         <div class="tl-head"><span class="tl-year">2026</span><span class="tl-role">Canvas ADE — Expanse</span><span class="tl-org">Founder / Builder</span></div>
-        <p class="tl-desc">Designing and building an agentic dev environment on an infinite canvas — orchestrating multiple AI agents spatially to make building software feel like sketching ideas.</p>
-        <div class="tl-tags"><span class="chip">Agents</span><span class="chip">Canvas</span><span class="chip">DX</span></div>
+        <p class="tl-desc">Building an agentic development environment on an infinite canvas: parallel agent orchestration, persistent session state, and live streaming output rendered as spatial nodes.</p>
+        <div class="tl-tags"><span class="chip">Agents</span><span class="chip">tRPC</span><span class="chip">DX</span></div>
       </div>
       <div class="tl-item" data-reveal>
-        <div class="tl-head"><span class="tl-year">2025</span><span class="tl-role">AI Products &amp; Agents</span><span class="tl-org">Freelance / Indie</span></div>
-        <p class="tl-desc">Shipped the Intercom Triage agent and the Entheos marketplace — going deep on RAG, knowledge-grounded automation, and two-sided product flows.</p>
-        <div class="tl-tags"><span class="chip">RAG</span><span class="chip">Marketplace</span><span class="chip">Automation</span></div>
+        <div class="tl-head"><span class="tl-year">2025</span><span class="tl-role">AI products &amp; integrations</span><span class="tl-org">Freelance / Indie</span></div>
+        <p class="tl-desc">Shipped the Intercom Triage agent (a RAG pipeline classifying tickets against a live product knowledge base) and the Entheos marketplace, with shared quote primitives and Stripe Connect split payments.</p>
+        <div class="tl-tags"><span class="chip">RAG</span><span class="chip">Stripe Connect</span><span class="chip">Marketplace</span></div>
       </div>
       <div class="tl-item" data-reveal>
-        <div class="tl-head"><span class="tl-year">2024</span><span class="tl-role">Web Apps &amp; Realtime</span><span class="tl-org">Builder</span></div>
-        <p class="tl-desc">Built the YouTube Karaoke Player — leaned into realtime sync, multi-screen experiences, and interaction design that gets out of the user's way.</p>
-        <div class="tl-tags"><span class="chip">Realtime</span><span class="chip">React</span><span class="chip">UX</span></div>
+        <div class="tl-head"><span class="tl-year">2024</span><span class="tl-role">Realtime systems</span><span class="tl-org">Builder</span></div>
+        <p class="tl-desc">Built the YouTube Karaoke Player: one WebSocket session as the source of truth, phones sending intent as remotes, and a TV display holding authority over playback.</p>
+        <div class="tl-tags"><span class="chip">WebSockets</span><span class="chip">React</span><span class="chip">State sync</span></div>
       </div>
       <div class="tl-item" data-reveal>
-        <div class="tl-head"><span class="tl-year">2023</span><span class="tl-role">Discovering vibe coding</span><span class="tl-org">Self-taught</span></div>
-        <p class="tl-desc">Fell in love with building on the web and pairing with AI tools — the moment ideas could become working software in an afternoon, I was hooked.</p>
+        <div class="tl-head"><span class="tl-year">2023</span><span class="tl-role">Foundations</span><span class="tl-org">Self-taught</span></div>
+        <p class="tl-desc">Started building on the web and adopted AI pair-tooling early. Learned fast by shipping small products end-to-end and owning every failure myself.</p>
         <div class="tl-tags"><span class="chip">Foundations</span><span class="chip">AI tooling</span></div>
       </div>
     </div>
@@ -410,20 +492,20 @@
 </section>
 
 <!-- ============ ABOUT ============ -->
-<section id="about" class="section-pad" style="background:var(--bg-deep)">
+<section id="about" class="section-pad">
   <div class="container">
     <div class="about-grid">
       <div class="portrait" data-reveal data-reveal-clip>
         <div class="ph"><span>portrait · drop photo</span></div>
       </div>
       <div class="about-copy" data-reveal style="--reveal-delay:.1s">
-        <span class="kicker">04 — About</span>
-        <h2 style="margin:1rem 0 1.4rem;font-size:var(--fs-2xl)">A builder who treats AI like a second pair of hands — not a crutch.</h2>
-        <p>I'm Christian — a web developer and AI-building enthusiast based on the idea that <strong>taste plus velocity beats either one alone</strong>. I prototype fast, sweat the details slowly, and ship things people actually use.</p>
-        <p>"Vibe coding" for me isn't hand-waving — it's a disciplined loop: a clear spec, the right model, tight feedback, and an eye for craft on every screen. The AI handles the toil; I own the product thinking, the UX, and the polish.</p>
+        <span class="kicker">About</span>
+        <h2 style="margin:1rem 0 1.4rem;font-size:var(--fs-2xl)">The parts users never see are the parts I care about most.</h2>
+        <p>I'm Christian, a self-taught developer who learned backend the honest way: by building five products end-to-end and owning every failure mode myself. Somewhere between a double-fired webhook and a race condition, I found the work I like best — designing systems that stay correct when the real world misbehaves.</p>
+        <p>AI tooling is my accelerator, not my autopilot. It writes boilerplate at machine speed; I own the data model, the state machines, and the verification. That trade is how a solo builder ships production-grade systems in weeks instead of quarters.</p>
         <div class="stats-row" data-reveal>
-          <div class="stat-cell"><span class="big"><span data-count="4">0</span>+</span><span class="cap">Products shipped</span></div>
-          <div class="stat-cell"><span class="big"><span data-count="10">0</span>x</span><span class="cap">Faster prototyping</span></div>
+          <div class="stat-cell"><span class="big"><span data-count="5">0</span></span><span class="cap">Products built end-to-end</span></div>
+          <div class="stat-cell"><span class="big"><span data-count="3">0</span>+</span><span class="cap">Years building &amp; shipping</span></div>
           <div class="stat-cell"><span class="big">100<span style="font-size:.6em">%</span></span><span class="cap">Hands-on the craft</span></div>
         </div>
       </div>
@@ -432,14 +514,14 @@
 </section>
 
 <!-- ============ CONTACT ============ -->
-<section id="contact" class="section-pad contact">
-  <div class="hero-mesh" aria-hidden="true" style="opacity:.4"></div>
+<section id="contact" class="section-pad contact" style="background:var(--bg-deep)">
+  <div class="hero-mesh" aria-hidden="true" style="opacity:.35"></div>
   <div class="container" style="position:relative;z-index:1">
     <div class="contact-grid">
       <div class="contact-head" data-reveal>
-        <span class="kicker">05 — Contact</span>
-        <h2 style="margin-top:1.2rem">Have an idea?<br>Let's build it.</h2>
-        <p class="lead" style="margin-top:1.4rem;max-width:42ch">Whether it's a product to ship, a prototype to prove out, or a role to fill — I reply within 24 hours.</p>
+        <span class="kicker">Contact</span>
+        <h2 style="margin-top:1.2rem">Hiring for backend?<br>Let's talk.</h2>
+        <p class="lead" style="margin-top:1.4rem;max-width:42ch">I'm open to full-time backend roles, and I take on freelance builds. Tell me what you're working on; I reply within 24 hours.</p>
 
         <div class="contact-channels">
           <a class="channel" href="mailto:cdeasis923@gmail.com">
@@ -452,9 +534,9 @@
             <span><span class="c-label">LinkedIn</span><br><span class="c-val">/in/christian-de-asis</span></span>
             <span class="c-arrow"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></span>
           </a>
-          <a class="channel" href="mailto:cdeasis923@gmail.com?subject=Let's%20schedule%20a%20call">
-            <span class="c-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M3 9h18M8 2v4M16 2v4M9 14l2 2 4-4"/></svg></span>
-            <span><span class="c-label">Schedule a call</span><br><span class="c-val">Book a 30-min intro</span></span>
+          <a class="channel" href="https://github.com/ch923dev" target="_blank" rel="noopener">
+            <span class="c-ic"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48l-.01-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.53 2.36 1.09 2.94.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.6 9.6 0 0 1 5 0c1.91-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.69-4.57 4.94.36.31.68.92.68 1.85l-.01 2.74c0 .27.18.58.69.48A10 10 0 0 0 12 2Z"/></svg></span>
+            <span><span class="c-label">GitHub</span><br><span class="c-val">github.com/ch923dev</span></span>
             <span class="c-arrow"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></span>
           </a>
         </div>
@@ -472,8 +554,8 @@
           <span class="err">// enter a valid email</span>
         </div>
         <div class="field">
-          <label for="message">Project / message</label>
-          <textarea id="message" name="message" placeholder="Tell me what you're building…"></textarea>
+          <label for="message">Role / project</label>
+          <textarea id="message" name="message" placeholder="Tell me about the role or the system you're building…"></textarea>
           <span class="err">// a few more words, please</span>
         </div>
         <button type="submit" class="btn btn-primary btn-block" data-magnetic="0.2">Send message</button>
@@ -490,8 +572,9 @@
   <div class="container">
     <div style="overflow:hidden"><div class="footer-big">LET'S BUILD</div></div>
     <div class="footer-bottom">
-      <span class="muted">© <span data-year></span> Christian De Asis — built with taste + AI velocity.</span>
+      <span class="muted">© <span data-year>2026</span> Christian De Asis · designed &amp; built by hand, accelerated by AI.</span>
       <div class="footer-links">
+        <a href="https://github.com/ch923dev" target="_blank" rel="noopener">GitHub</a>
         <a href="https://www.linkedin.com/in/christian-de-asis-0092412aa/" target="_blank" rel="noopener">LinkedIn</a>
         <a href="mailto:cdeasis923@gmail.com">Email</a>
         <a href="#top">Back to top ↑</a>
@@ -500,6 +583,6 @@
   </div>
 </footer>
 
-<script src="scripts/portfolio.js?v=2"></script>
+<script src="scripts/portfolio.js?v=3"></script>
 </body>
 </html>

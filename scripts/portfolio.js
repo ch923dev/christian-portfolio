@@ -189,7 +189,7 @@
     });
     function loop() {
       rx += (mx - rx) * 0.18; ry += (my - ry) * 0.18;
-      ring.style.transform = 'translate(' + rx + 'px,' + ry + 'px) translate(-50%,-50%)';
+      ring.style.transform = 'translate(' + rx + 'px,' + ry + 'px) translate(-50%,-50%) scale(var(--cur-s,1))';
       requestAnimationFrame(loop);
     }
     loop();
@@ -215,20 +215,6 @@
     Object.keys(map).forEach((id) => { const s = document.getElementById(id); if (s) io.observe(s); });
   }
 
-  /* ---------- Hero prompt typing ---------- */
-  function bindPromptType() {
-    const el = document.querySelector('[data-type]');
-    if (!el) return;
-    const full = el.getAttribute('data-type');
-    if (prefersReduced) { el.textContent = full; return; }
-    el.textContent = '';
-    let i = 0;
-    function step() {
-      if (i <= full.length) { el.textContent = full.slice(0, i); i++; setTimeout(step, 45 + Math.random() * 40); }
-    }
-    setTimeout(step, 900);
-  }
-
   /* ---------- Contact form ---------- */
   function bindForm() {
     const form = document.querySelector('[data-contact-form]');
@@ -247,16 +233,12 @@
       if (!emailOk) { setInvalid(emailF, true); ok = false; } else setInvalid(emailF, false);
       if (msg.value.trim().length < 10) { setInvalid(msgF, true); ok = false; } else setInvalid(msgF, false);
       if (!ok) { status.textContent = '// please fix the highlighted fields'; status.style.color = 'oklch(0.7 0.18 25)'; return; }
-      const btn = form.querySelector('button[type="submit"]');
-      btn.disabled = true; btn.dataset.label = btn.textContent; btn.textContent = 'Sending…';
-      status.style.color = ''; status.textContent = '';
-      setTimeout(() => {
-        form.classList.add('success');
-        btn.textContent = 'Message sent ✓';
-        status.textContent = '// thanks, ' + name.value.trim().split(' ')[0] + " — I'll reply within 24h.";
-        form.reset();
-        setTimeout(() => { btn.disabled = false; btn.textContent = btn.dataset.label; }, 2600);
-      }, 1100);
+      // No backend yet: compose the email in the visitor's own mail app, honestly.
+      const subject = 'Portfolio contact from ' + name.value.trim();
+      const body = msg.value.trim() + '\n\n' + name.value.trim() + '\n' + email.value.trim();
+      status.style.color = '';
+      status.textContent = '// opening your email app… or write cdeasis923@gmail.com directly';
+      window.location.href = 'mailto:cdeasis923@gmail.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
     });
     form.querySelectorAll('input, textarea').forEach((inp) => {
       inp.addEventListener('input', () => inp.closest('.field').classList.remove('invalid'));
@@ -330,7 +312,7 @@
     bindTheme(); bindNav(); bindMenu(); bindProgress();
     applyStagger(); bindReveal(); bindCounters();
     bindMagnetic(); bindSpotlight(); bindCursor();
-    bindScrollSpy(); bindPromptType(); bindForm(); bindLightbox(); setYear();
+    bindScrollSpy(); bindForm(); bindLightbox(); setYear();
   }
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init);
   else init();

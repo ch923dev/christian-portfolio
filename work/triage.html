@@ -4,11 +4,12 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Intercom Triage App — Case Study · Christian De Asis</title>
-<meta name="description" content="An AI agent that auto-categorizes incoming support tickets against a product&rsquo;s knowledge base — routing every conversation to the right team before a human reads it.">
+<meta name="description" content="An AI agent that auto-categorizes incoming support tickets against a product&rsquo;s knowledge base, routing every conversation to the right team before a human reads it.">
 <meta name="theme-color" content="#0c0c12">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%237c6cf0'/%3E%3Ctext x='32' y='42' font-family='Arial,sans-serif' font-size='28' font-weight='700' fill='%23fff' text-anchor='middle'%3ECD%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="../styles/portfolio.css?v=2">
+<link rel="stylesheet" href="../styles/portfolio.css?v=3">
 </head>
 <body>
 <div class="progress"></div>
@@ -40,12 +41,12 @@
     <a href="../index.html#work" class="cs-back" data-reveal><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 6l-6 6 6 6"/></svg> All work</a>
     <div data-reveal style="--reveal-delay:.06s;margin-top:1.4rem"><span class="chip"><span class="chip-dot"></span>AI Agent</span></div>
     <h1 class="cs-title" data-reveal style="--reveal-delay:.1s">Intercom Triage App</h1>
-    <p class="cs-tagline" data-reveal style="--reveal-delay:.16s">An AI agent that auto-categorizes incoming support tickets against a product&rsquo;s knowledge base — routing every conversation to the right team before a human reads it.</p>
+    <p class="cs-tagline" data-reveal style="--reveal-delay:.16s">An AI agent that auto-categorizes incoming support tickets against a product&rsquo;s knowledge base, routing every conversation to the right team before a human reads it.</p>
     <div class="cs-facts" data-reveal><div class="fact"><span class="k">Role</span><span class="v">Design + Build</span></div><div class="fact"><span class="k">Timeline</span><span class="v">2025</span></div><div class="fact"><span class="k">Type</span><span class="v">AI agent / automation</span></div><div class="fact"><span class="k">Stack</span><span class="v">Node · LLM / RAG · Vector DB</span></div></div>
     <div class="cs-cover" data-reveal data-reveal-clip style="--reveal-delay:.1s">
       <div class="mockup">
         <div class="mockup-bar"><i></i><i></i><i></i><span class="url">triage.ai</span></div>
-        <div class="mockup-canvas"><div class="glow-orb" style="background:var(--indigo);opacity:.45;width:50%;height:60%"></div><span class="mockup-label">product shot · ticket pipeline</span></div>
+        <div class="mockup-canvas"><div class="diagram" aria-hidden="true"><span class="d-node">incoming ticket</span><span class="d-link"></span><span class="d-node">retrieve · product kb</span><span class="d-link" style="--d-delay:.6s"></span><span class="d-node accent">classify + confidence</span><span class="d-link" style="--d-delay:1.2s"></span><div class="d-row"><span class="d-node">auto-route</span><span class="d-node">human review</span></div><span class="d-note">retrieval-grounded · system sketch</span></div></div>
       </div>
     </div>
   </div>
@@ -55,13 +56,13 @@
   <div class="container">
     <div class="cs-layout">
       <aside class="cs-aside" data-reveal>
-        <span class="kicker">01 — Overview</span>
+        <span class="kicker">Overview</span>
         <p>The problem worth solving, and who it was for.</p>
       </aside>
       <div class="cs-prose" data-reveal style="--reveal-delay:.08s">
         <h4>The problem</h4>
         <p>Support teams drown in untriaged tickets. Every conversation lands in one queue, and a human has to read, categorize, and route it before the real work even starts. At volume, that triage tax delays responses and burns out the team.</p>
-        <p>The Triage App reads each incoming Intercom ticket, <strong>understands it against the product&rsquo;s own knowledge base, and tags + routes it automatically</strong> — so humans start at the answer, not the sorting.</p>
+        <p>The Triage App reads each incoming Intercom ticket, <strong>understands it against the product&rsquo;s own knowledge base, and tags + routes it automatically</strong>, so humans start at the answer, not the sorting.</p>
         <div class="cs-callout"><p class="q">&ldquo;Don&rsquo;t make a person do what a grounded model can do in a second — let them spend that second being helpful.&rdquo;</p></div>
       </div>
     </div>
@@ -71,12 +72,12 @@
   <div class="container">
     <div class="cs-layout">
       <aside class="cs-aside" data-reveal>
-        <span class="kicker">02 — Approach</span>
+        <span class="kicker">Approach</span>
         <p>Key product and engineering decisions.</p>
       </aside>
       <div class="cs-prose" data-reveal style="--reveal-delay:.08s">
         <h4>Grounded, not guessing</h4>
-        <p>Generic classification hallucinates categories that don&rsquo;t match the product. I built the agent on retrieval-augmented generation: the knowledge base is embedded into a vector store, and every ticket is classified against the company&rsquo;s real documentation — not the model&rsquo;s assumptions.</p>
+        <p>Generic classification hallucinates categories that don&rsquo;t match the product. I built the agent on retrieval-augmented generation: the knowledge base is embedded into a vector store, and every ticket is classified against the company&rsquo;s real documentation, not the model&rsquo;s assumptions.</p>
         <h4>Confidence-aware routing</h4>
         <p>The agent returns a category <em>and</em> a confidence score. High-confidence tickets route automatically; ambiguous ones are flagged for a human with the model&rsquo;s reasoning attached, so trust builds instead of breaking.</p>
         <ul class="bullets"><li>RAG pipeline grounding every decision in the product KB</li><li>Auto-tagging with category + confidence on each ticket</li><li>Instant routing to the correct team via the Intercom API</li><li>Human-in-the-loop fallback for low-confidence cases</li></ul>
@@ -88,13 +89,13 @@
   <div class="container">
     <div class="cs-layout">
       <aside class="cs-aside" data-reveal>
-        <span class="kicker">03 — How it works</span>
+        <span class="kicker">How it works</span>
         <p>The shape of the system, at a glance.</p>
       </aside>
       <div class="cs-prose" data-reveal style="--reveal-delay:.08s">
-        <p>The agent is a <em>grounded</em> classifier. Rather than guessing categories, it reasons about each ticket against the product&rsquo;s own knowledge base and returns a category with a confidence score — high-confidence tickets route themselves, ambiguous ones go to a human with the reasoning attached.</p>
-        <p>The design choice that matters: the knowledge base is the source of truth. Improving triage means improving the docs — no retraining, no brittle rule trees to maintain as the product changes.</p>
-        <div class="cs-imgrow two"><div class="cs-frame"><div class="mockup"><div class="mockup-bar"><i></i><i></i><i></i><span class="url">triage.ai/pipeline</span></div><div class="mockup-canvas"><div class="glow-orb" style="background:var(--indigo);opacity:.4;width:55%;height:55%"></div><span class="mockup-label">classification pipeline</span></div></div></div><div class="cs-frame"><div class="mockup"><div class="mockup-bar"><i></i><i></i><i></i><span class="url">triage.ai/review</span></div><div class="mockup-canvas"><div class="glow-orb" style="background:var(--violet);opacity:.4;width:55%;height:55%"></div><span class="mockup-label">human review</span></div></div></div></div>
+        <p>The agent is a <em>grounded</em> classifier. Rather than guessing categories, it reasons about each ticket against the product&rsquo;s own knowledge base and returns a category with a confidence score: high-confidence tickets route themselves, ambiguous ones go to a human with the reasoning attached.</p>
+        <p>The design choice that matters: the knowledge base is the source of truth. Improving triage means improving the docs: no retraining, no brittle rule trees to maintain as the product changes.</p>
+        <div class="cs-imgrow two"><div class="cs-frame"><div class="mockup"><div class="mockup-bar"><i></i><i></i><i></i><span class="url">triage.ai/pipeline</span></div><div class="mockup-canvas"><div class="diagram" aria-hidden="true"><span class="d-node">embed kb docs</span><span class="d-link"></span><span class="d-node accent">vector store</span><span class="d-link" style="--d-delay:.6s"></span><span class="d-node">grounded classification</span><span class="d-note">rag pipeline</span></div></div></div></div><div class="cs-frame"><div class="mockup"><div class="mockup-bar"><i></i><i></i><i></i><span class="url">triage.ai/review</span></div><div class="mockup-canvas"><div class="diagram" aria-hidden="true"><span class="d-node accent">low confidence</span><span class="d-link"></span><span class="d-node">flag + model reasoning</span><span class="d-link" style="--d-delay:.6s"></span><span class="d-node">human decision</span><span class="d-note">human-in-the-loop</span></div></div></div></div></div>
       </div>
     </div>
   </div>
@@ -103,7 +104,7 @@
   <div class="container">
     <div class="cs-layout">
       <aside class="cs-aside" data-reveal>
-        <span class="kicker">04 — Results</span>
+        <span class="kicker">Results</span>
         <p>What the build delivered.</p>
       </aside>
       <div class="cs-prose" data-reveal style="--reveal-delay:.08s">
@@ -131,7 +132,7 @@
   <div class="container">
     <div style="overflow:hidden"><div class="footer-big">LET&rsquo;S BUILD</div></div>
     <div class="footer-bottom">
-      <span class="muted">© <span data-year></span> Christian De Asis — built with taste + AI velocity.</span>
+      <span class="muted">© <span data-year>2026</span> Christian De Asis · designed &amp; built by hand, accelerated by AI.</span>
       <div class="footer-links">
         <a href="https://www.linkedin.com/in/christian-de-asis-0092412aa/" target="_blank" rel="noopener">LinkedIn</a>
         <a href="mailto:cdeasis923@gmail.com">Email</a>
@@ -140,6 +141,6 @@
     </div>
   </div>
 </footer>
-<script src="../scripts/portfolio.js?v=2"></script>
+<script src="../scripts/portfolio.js?v=3"></script>
 </body>
 </html>
