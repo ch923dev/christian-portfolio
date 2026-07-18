@@ -201,9 +201,9 @@
           <h3>Snowball</h3>
           <p class="project-desc">A local-first Windows tray app that plans debt payoff one payday at a time. A pure-function projection engine with Decimal-exact money re-solves the whole plan from real balances after every logged payment, so plan and reality can't drift.</p>
           <div class="project-meta">
-            <div class="metric"><span class="val">159/159</span><span class="lbl">Tests passing</span></div>
+            <div class="metric"><span class="val">Per-payday</span><span class="lbl">The 2nd &amp; 16th, not months</span></div>
             <div class="metric"><span class="val">Centavo-exact</span><span class="lbl">Money math, no floats</span></div>
-            <div class="metric"><span class="val">Re-solve</span><span class="lbl">Never reconcile</span></div>
+            <div class="metric"><span class="val">Debt-free date</span><span class="lbl">Recomputed on every payment</span></div>
           </div>
           <div class="project-stack">
             <span class="chip"><span class="chip-dot"></span>Python</span>
@@ -242,8 +242,8 @@
           <h3>Limitboard</h3>
           <p class="project-desc">A Windows-native usage-limit board for agentic coding CLIs: Claude Code, Codex, OpenRouter. A Rust core reads each CLI's own credentials read-only; drift-tolerant adapters degrade to stale-with-age instead of blanking when undocumented endpoints misbehave.</p>
           <div class="project-meta">
-            <div class="metric"><span class="val">46/46</span><span class="lbl">Tests passing</span></div>
             <div class="metric"><span class="val">6</span><span class="lbl">CLIs auto-detected</span></div>
+            <div class="metric"><span class="val">Warns early</span><span class="lbl">Toast before a limit binds</span></div>
             <div class="metric"><span class="val">0</span><span class="lbl">Bytes off-machine</span></div>
           </div>
           <div class="project-stack">
