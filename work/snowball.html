@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Snowball — Case Study · Christian De Asis</title>
+<meta name="description" content="Snowball plans debt payoff one payday at a time: a pure-function projection engine with Decimal-exact money, re-solved from real balances after every logged payment.">
+<meta name="theme-color" content="#0c0c12">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%237c6cf0'/%3E%3Ctext x='32' y='42' font-family='Arial,sans-serif' font-size='28' font-weight='700' fill='%23fff' text-anchor='middle'%3ECD%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="../styles/portfolio.css?v=3">
+</head>
+<body>
+<div class="progress"></div>
+<div class="noise"></div>
+<header class="nav">
+  <div class="container nav-inner">
+    <a href="../index.html" class="logo" aria-label="Christian De Asis — home">
+      <span class="logo-mark">CD</span>
+      <span class="hide-mobile">Christian&nbsp;De&nbsp;Asis</span>
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="../index.html#work">Work</a>
+      <a href="../index.html#skills">Stack</a>
+      <a href="../index.html#about">About</a>
+      <a href="../index.html#contact">Contact</a>
+    </nav>
+    <div class="nav-right">
+      <button class="theme-toggle" data-theme-toggle aria-label="Toggle color theme"><svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/></svg><svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M5 5l1.5 1.5M17.5 17.5 19 19M19 5l-1.5 1.5M6.5 17.5 5 19"/></svg></button>
+      <a href="../index.html#contact" class="btn btn-primary btn-sm hide-mobile" data-magnetic="0.3">Let&rsquo;s talk</a>
+    </div>
+  </div>
+</header>
+<main>
+
+<section class="cs-hero">
+  <div class="hero-mesh" aria-hidden="true" style="opacity:.5"></div>
+  <div class="bg-grid" aria-hidden="true"></div>
+  <div class="container" style="position:relative;z-index:1">
+    <a href="../index.html#work" class="cs-back" data-reveal><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 6l-6 6 6 6"/></svg> All work</a>
+    <div data-reveal style="--reveal-delay:.06s;margin-top:1.4rem"><span class="chip"><span class="chip-dot"></span>Personal Finance</span></div>
+    <h1 class="cs-title" data-reveal style="--reveal-delay:.1s">Snowball</h1>
+    <p class="cs-tagline" data-reveal style="--reveal-delay:.16s">Debt payoff planners think in months; paychecks land on the 2nd and the 16th. Snowball projects the whole payoff one payday at a time, re-solves the plan from real balances after every logged payment, and nudges before anything falls due.</p>
+    <div class="cs-facts" data-reveal><div class="fact"><span class="k">Role</span><span class="v">Solo · design &amp; build</span></div><div class="fact"><span class="k">Timeline</span><span class="v">2026</span></div><div class="fact"><span class="k">Type</span><span class="v">Windows tray app · local web UI</span></div><div class="fact"><span class="k">Stack</span><span class="v">Python · FastAPI · SQLite</span></div></div>
+    <div class="cs-cover" data-reveal data-reveal-clip style="--reveal-delay:.1s">
+      <div class="mockup">
+        <div class="mockup-bar"><i></i><i></i><i></i><span class="url">127.0.0.1:8765 · this payday</span></div>
+        <div class="mockup-canvas has-shot">
+          <img class="shot" src="../screens/snowball-cover.png" alt="Snowball payday view: runway bars to debt-free and the pay-today list with paid strikethroughs and a rebate warning" loading="lazy" width="1600" height="900">
+          <span class="shot-badge">fictional data</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cs-section">
+  <div class="container">
+    <div class="cs-layout">
+      <aside class="cs-aside" data-reveal>
+        <span class="kicker">Overview</span>
+        <p>The problem worth solving, and who it was for.</p>
+      </aside>
+      <div class="cs-prose" data-reveal style="--reveal-delay:.08s">
+        <h4>The problem</h4>
+        <p>Consumer credit in the Philippines arrives in fortnight-sized pieces: BNPL installments, app loans, store credit. Each has its own due day, funded by a paycheck that lands twice a month. Every debt-payoff tool I found models this monthly, and monthly is simply wrong here. A bill due on the 1st cannot be paid from the paycheck on the 2nd; it has to come out of the <em>previous</em> 16th&rsquo;s money. A semi-monthly loan owes on both paydays. Get the funding wrong and the plan tells you to spend money you won&rsquo;t have for another two weeks.</p>
+        <p>Worse, planners drift. The spreadsheet says one thing, reality says another, and reconciling them is manual work that stops happening by week three. <strong>Snowball never lets plan and reality drift apart: every screen and every notification is recomputed from what is actually owed right now</strong>, one payday at a time, until the book hits zero. Money is exact to the centavo, and financial data never leaves the machine.</p>
+        <div class="cs-callout"><p class="q">&ldquo;The plan is never edited — it is re-solved. Actual and projected state can&rsquo;t drift, because there is only one source of truth: the balances.&rdquo;</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="cs-section">
+  <div class="container">
+    <div class="cs-layout">
+      <aside class="cs-aside" data-reveal>
+        <span class="kicker">Approach</span>
+        <p>Key product and engineering decisions.</p>
+      </aside>
+      <div class="cs-prose" data-reveal style="--reveal-delay:.08s">
+        <h4>A payday model, not a monthly model</h4>
+        <p>The domain constant isn&rsquo;t the month; it&rsquo;s the two paychecks. Every loan maps to the paycheck that can actually fund it (the due-on-the-1st edge case belongs to the previous fortnight), and each projected payday pays minimums first, holds back a reserve so the <em>next</em> payday can still cover its own minimums, then rolls everything left onto the smallest balance. The reserve is the trade-off that makes the greedy snowball safe: it stops a surplus payday from draining money a tight payday will need.</p>
+        <h4>Pure engine, thin shell</h4>
+        <p>The projection is pure functions over immutable inputs. No I/O, no clock, no globals. The web UI, the calendar grid, the notifier, and the CLI all ask the same question through one service call: given current balances, what&rsquo;s the plan? That is why the whole thing holds together at 159 tests: the hard logic is testable without a browser, a toast, or a database.</p>
+        <h4>Exact money as an enforced invariant, not a convention</h4>
+        <p>Amounts are Decimal in memory and TEXT in SQLite; a float column would silently corrupt centavos. When a payday&rsquo;s extra is split across several loans, the split is done in integer centavos with largest-remainder apportionment, so the shares sum to the pool exactly. No rounding leak, ties broken toward the smallest balance to preserve momentum. A test greps the engine for <code>float</code> and fails the build if one appears.</p>
+        <h4>Payments settle against a cycle, not a timestamp</h4>
+        <p>&ldquo;Did I pay this fortnight?&rdquo; sounds trivial until an early payment for the <em>next</em> cycle looks identical to a late payment for this one. Every ledger row is stamped with the payday it funds, at logging time. Timestamp-window schemes leaked in both directions; the tag settles each payment against exactly one payday, forever, and paying early correctly silences the overdue nag.</p>
+        <ul class="bullets"><li>Projects the full payoff (every payday, every loan, reserve and snowball per fortnight) down to a debt-free date.</li><li>Logs real payments and re-solves the whole plan from the new balances, instantly, on every edit.</li><li>A month calendar of the same plan: payday totals, due chips, paid checkmarks, and overdue, the only red in the app.</li><li>Seven kinds of quiet Windows toasts, each guaranteed to fire exactly once per period.</li></ul>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="cs-section">
+  <div class="container">
+    <div class="cs-layout">
+      <aside class="cs-aside" data-reveal>
+        <span class="kicker">How it works</span>
+        <p>The shape of the system, at a glance.</p>
+      </aside>
+      <div class="cs-prose" data-reveal style="--reveal-delay:.08s">
+        <p>One background process, three roles: a FastAPI web UI bound to 127.0.0.1 (the browser is the only window), an hourly scheduler that decides notifications, and a system-tray icon that owns the main thread. Beneath them, strict layers: a pure domain engine for the projection, a SQLite store that backs the database up before any schema migration, and one service seam where the two meet. The notifier&rsquo;s deciding logic is itself a pure function of loans, ledger, plan, config, and the clock, tested without toasts or a timer.</p>
+        <p>Two design choices carry the reliability story. Notification dedup is a database row keyed by event and period, so an hourly re-check and a laptop that slept through the morning both resolve to &ldquo;fire once, exactly once.&rdquo; And the single-instance guard is an OS file lock rather than a bound port: a reserved port fails in a way that is indistinguishable from &ldquo;already running,&rdquo; which would wedge the app shut, while the file lock self-clears even on a crash.</p>
+        <div class="cs-imgrow two"><div class="cs-frame"><div class="mockup"><div class="mockup-bar"><i></i><i></i><i></i><span class="url">127.0.0.1:8765 · loans</span></div><div class="mockup-canvas has-shot"><img class="shot" src="../screens/snowball-a.png" alt="Snowball loans view: payoff order smallest-first with the snowball target tagged, balances and scheduled minimums" loading="lazy" width="1280" height="960"></div></div></div><div class="cs-frame"><div class="mockup"><div class="mockup-bar"><i></i><i></i><i></i><span class="url">127.0.0.1:8765 · overview</span></div><div class="mockup-canvas has-shot"><img class="shot" src="../screens/snowball-b.png" alt="Snowball overview: total owed, monthly minimums split by pay group, snowball fuel, budget consumed, debt-free date" loading="lazy" width="1280" height="960"></div></div></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="cs-section">
+  <div class="container">
+    <div class="cs-layout">
+      <aside class="cs-aside" data-reveal>
+        <span class="kicker">Results</span>
+        <p>What the build delivered.</p>
+      </aside>
+      <div class="cs-prose" data-reveal style="--reveal-delay:.08s">
+        <div class="cs-metrics"><div class="m"><span class="v">159/159</span><span class="l">Tests passing · six suites</span></div><div class="m"><span class="v">₱0.00</span><span class="l">Rounding drift · centavo-exact</span></div><div class="m"><span class="v">2/month</span><span class="l">Paydays modeled, not 1</span></div><div class="m"><span class="v">7</span><span class="l">Notification types · fire exactly once</span></div></div>
+        <p>Snowball runs daily on my own machine; it plans my actual payoff. The build proves out exact-money arithmetic under division, a re-solve-don&rsquo;t-reconcile architecture, and calm failure-first design: shortfalls flagged loudly, red reserved for genuinely missed payments. It is deliberately local, with no accounts, no cloud, and no telemetry. The screenshots on this page show the real app served against a fictional loan book; the actual numbers stay private, which is rather the point of the product.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cs-next">
+  <div class="container">
+    <a href="limitboard.html" data-reveal data-magnetic="0.08">
+      <div>
+        <span class="lbl">Next project</span>
+        <div class="nm">Limitboard <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></div>
+      </div>
+      <span class="chip">Dev Tooling</span>
+    </a>
+  </div>
+</section>
+
+</main>
+<footer class="footer">
+  <div class="container">
+    <div style="overflow:hidden"><div class="footer-big">LET&rsquo;S BUILD</div></div>
+    <div class="footer-bottom">
+      <span class="muted">© <span data-year>2026</span> Christian De Asis · designed &amp; built by hand, accelerated by AI.</span>
+      <div class="footer-links">
+        <a href="https://www.linkedin.com/in/christian-de-asis-0092412aa/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="mailto:cdeasis923@gmail.com">Email</a>
+        <a href="../index.html">Home ↑</a>
+      </div>
+    </div>
+  </div>
+</footer>
+<script src="../scripts/portfolio.js?v=3"></script>
+</body>
+</html>

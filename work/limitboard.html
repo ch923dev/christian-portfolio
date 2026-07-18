@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Limitboard — Case Study · Christian De Asis</title>
+<meta name="description" content="Limitboard is a Windows-native usage-limit board for agentic coding CLIs: auto-detected providers, drift-tolerant adapters, and credentials that never leave the native core.">
+<meta name="theme-color" content="#0c0c12">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%237c6cf0'/%3E%3Ctext x='32' y='42' font-family='Arial,sans-serif' font-size='28' font-weight='700' fill='%23fff' text-anchor='middle'%3ECD%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="../styles/portfolio.css?v=3">
+</head>
+<body>
+<div class="progress"></div>
+<div class="noise"></div>
+<header class="nav">
+  <div class="container nav-inner">
+    <a href="../index.html" class="logo" aria-label="Christian De Asis — home">
+      <span class="logo-mark">CD</span>
+      <span class="hide-mobile">Christian&nbsp;De&nbsp;Asis</span>
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="../index.html#work">Work</a>
+      <a href="../index.html#skills">Stack</a>
+      <a href="../index.html#about">About</a>
+      <a href="../index.html#contact">Contact</a>
+    </nav>
+    <div class="nav-right">
+      <button class="theme-toggle" data-theme-toggle aria-label="Toggle color theme"><svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/></svg><svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M5 5l1.5 1.5M17.5 17.5 19 19M19 5l-1.5 1.5M6.5 17.5 5 19"/></svg></button>
+      <a href="../index.html#contact" class="btn btn-primary btn-sm hide-mobile" data-magnetic="0.3">Let&rsquo;s talk</a>
+    </div>
+  </div>
+</header>
+<main>
+
+<section class="cs-hero">
+  <div class="hero-mesh" aria-hidden="true" style="opacity:.5"></div>
+  <div class="bg-grid" aria-hidden="true"></div>
+  <div class="container" style="position:relative;z-index:1">
+    <a href="../index.html#work" class="cs-back" data-reveal><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 6l-6 6 6 6"/></svg> All work</a>
+    <div data-reveal style="--reveal-delay:.06s;margin-top:1.4rem"><span class="chip"><span class="chip-dot"></span>Dev Tooling</span></div>
+    <h1 class="cs-title" data-reveal style="--reveal-delay:.1s">Limitboard</h1>
+    <p class="cs-tagline" data-reveal style="--reveal-delay:.16s">Every agentic CLI meters usage differently and hides it somewhere else. Limitboard detects the tools you&rsquo;re logged into and turns their limits into one glanceable instrument panel, with tray alerts before a window binds.</p>
+    <div class="cs-facts" data-reveal><div class="fact"><span class="k">Role</span><span class="v">Solo · design &amp; build</span></div><div class="fact"><span class="k">Timeline</span><span class="v">2026</span></div><div class="fact"><span class="k">Type</span><span class="v">Windows desktop app · tray + board</span></div><div class="fact"><span class="k">Stack</span><span class="v">Tauri (Rust) · Vue 3 · TypeScript</span></div></div>
+    <div class="cs-cover" data-reveal data-reveal-clip style="--reveal-delay:.1s">
+      <div class="mockup">
+        <div class="mockup-bar"><i></i><i></i><i></i><span class="url">limitboard · board</span></div>
+        <div class="mockup-canvas has-shot">
+          <img class="shot" src="../screens/limitboard-cover.png" alt="Limitboard board: live Claude Code gauges, a degraded Codex card with retry countdown, and an OpenRouter spend card" loading="lazy" width="1600" height="900">
+          <span class="shot-badge">live capture</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cs-section">
+  <div class="container">
+    <div class="cs-layout">
+      <aside class="cs-aside" data-reveal>
+        <span class="kicker">Overview</span>
+        <p>The problem worth solving, and who it was for.</p>
+      </aside>
+      <div class="cs-prose" data-reveal style="--reveal-delay:.08s">
+        <h4>The problem</h4>
+        <p>Anyone running multiple agentic coding tools lives under several invisible meters at once. Claude Code has a 5-hour rolling session and two weekly windows; Codex tracks a 5-hour primary and a 7-day secondary; OpenRouter is pay-as-you-go spend with optional per-key caps. Each one is exposed in a different place: <code>/usage</code> inside Claude Code, <code>/status</code> inside Codex, browser dashboards for the rest. Checking any of them means interrupting the work the tools are supposed to accelerate. macOS users have menu-bar trackers for this; Windows has nothing.</p>
+        <p>The real cost isn&rsquo;t the checking, it&rsquo;s the not-checking. A limit that binds mid-run kills an agent session with no warning, and the work in flight goes with it. <strong>Limitboard makes every meter visible at a glance and warns before any of them binds</strong>, auto-detecting which CLIs are installed and authenticated, with zero manual credential entry and nothing ever leaving the machine.</p>
+        <div class="cs-callout"><p class="q">&ldquo;Six tools, six meters, six hiding places — one board.&rdquo;</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="cs-section">
+  <div class="container">
+    <div class="cs-layout">
+      <aside class="cs-aside" data-reveal>
+        <span class="kicker">Approach</span>
+        <p>Key product and engineering decisions.</p>
+      </aside>
+      <div class="cs-prose" data-reveal style="--reveal-delay:.08s">
+        <h4>Local-first, with credentials treated as the whole risk surface</h4>
+        <p>The app reads the credential files the CLIs already maintain: read-only, through a fixed whitelist in the Rust core, so the UI layer can never request an arbitrary path. Tokens are used in the native process and never reach the webview. The one pasted key the app accepts (OpenRouter) goes into Windows Credential Manager, never into config. I chose OS-keychain plus fixed-path whitelist over a convenient config file because a usage monitor that hoards credentials is a worse problem than the one it solves.</p>
+        <h4>Degrade, never blank</h4>
+        <p>Every usage endpoint here except OpenRouter&rsquo;s is undocumented and can drift or rate-limit at any time. So failure is a first-class state: a failed poll keeps the last-good data on screen with a stale-age badge, errors push the provider into exponential backoff (2 to 15 minutes, rate-limits start higher), and a server-sent Retry-After overrides the formula, because retrying before a penalty expires restarts it. The board stays honest and useful with the network unplugged.</p>
+        <h4>Fight platform quirks in the native layer, not the UI</h4>
+        <p>When one provider&rsquo;s API rejected browser-origin requests, the fetch moved into the Rust process, the same path any native client takes, instead of piling workarounds into the webview. Side effect: the OAuth token now never enters the UI layer at all.</p>
+        <ul class="bullets"><li>Auto-detects installed and authenticated agent CLIs on launch (credential files, then PATH, then env), showing the exact evidence for every probe.</li><li>Live board of instrument-style gauge cards: session and weekly percentages, dollar spend windows, ticking reset countdowns.</li><li>Any card drags out of the board into a floating always-on-top mini widget; a native ghost window follows the cursor beyond the app&rsquo;s own bounds.</li><li>Windows toast before any window crosses your threshold, with anti-flap hysteresis, and a tray icon dot colored by the worst gauge.</li></ul>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="cs-section">
+  <div class="container">
+    <div class="cs-layout">
+      <aside class="cs-aside" data-reveal>
+        <span class="kicker">How it works</span>
+        <p>The shape of the system, at a glance.</p>
+      </aside>
+      <div class="cs-prose" data-reveal style="--reveal-delay:.08s">
+        <p>Three layers. A small Rust core owns everything security- and OS-shaped: detection probes, whitelisted credential reads, secret storage, tray icon rendering, and the floating-widget window management. A typed adapter layer gives every provider the same tiny contract (detect, fetch, normalize into usage windows), so schema drift in any one provider stays quarantined in one file. Above that, a polling store reduces snapshots, applies backoff, and shares state across windows, because the main board and each floating widget are separate webviews that must not double-poll the same endpoints.</p>
+        <p>The one design choice that holds it together: every path assumes the data source will misbehave. Adapters return errors as values instead of throwing; the reducer keeps last-good data; the UI renders staleness and retry countdowns instead of blanks. Monitoring your other tools is only useful if the monitor itself never lies about what it knows.</p>
+        <div class="cs-imgrow two"><div class="cs-frame"><div class="mockup"><div class="mockup-bar"><i></i><i></i><i></i><span class="url">limitboard · settings</span></div><div class="mockup-canvas has-shot"><img class="shot" src="../screens/limitboard-a.png" alt="Limitboard settings: six provider detection rows with probe evidence, enable toggles, and Credential Manager key state" loading="lazy" width="1280" height="960"></div></div></div><div class="cs-frame"><div class="mockup"><div class="mockup-bar"><i></i><i></i><i></i><span class="url">limitboard · floating widget</span></div><div class="mockup-canvas has-shot"><img class="shot" src="../screens/limitboard-b.png" alt="Limitboard floating widget: an always-on-top Claude Code gauge card with pin control" loading="lazy" width="1280" height="960"></div></div></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="cs-section">
+  <div class="container">
+    <div class="cs-layout">
+      <aside class="cs-aside" data-reveal>
+        <span class="kicker">Results</span>
+        <p>What the build delivered.</p>
+      </aside>
+      <div class="cs-prose" data-reveal style="--reveal-delay:.08s">
+        <div class="cs-metrics"><div class="m"><span class="v">46/46</span><span class="l">Unit tests · adapters, reducer, alerts</span></div><div class="m"><span class="v">6</span><span class="l">Agent CLIs auto-detected with evidence</span></div><div class="m"><span class="v">3</span><span class="l">Native provider adapters live</span></div><div class="m"><span class="v">0</span><span class="l">Bytes off-machine · no telemetry</span></div></div>
+        <p>Not shipped publicly yet, and that&rsquo;s honest: it runs on my machine every day, which is the point. It was built to solve my own multi-agent workflow, and the build proves out credential-safe native integration, drift-tolerant polling, and a Windows tray and widget experience that macOS-only trackers left unserved. Release packaging (MSI via CI) is wired and tagged for when it goes public. The cover screenshot is the app monitoring the very session that captured it, degraded Codex card and all: the failure handling on display is the feature.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cs-next">
+  <div class="container">
+    <a href="entheos.html" data-reveal data-magnetic="0.08">
+      <div>
+        <span class="lbl">Next project</span>
+        <div class="nm">Entheos <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></div>
+      </div>
+      <span class="chip">Marketplace</span>
+    </a>
+  </div>
+</section>
+
+</main>
+<footer class="footer">
+  <div class="container">
+    <div style="overflow:hidden"><div class="footer-big">LET&rsquo;S BUILD</div></div>
+    <div class="footer-bottom">
+      <span class="muted">© <span data-year>2026</span> Christian De Asis · designed &amp; built by hand, accelerated by AI.</span>
+      <div class="footer-links">
+        <a href="https://www.linkedin.com/in/christian-de-asis-0092412aa/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="mailto:cdeasis923@gmail.com">Email</a>
+        <a href="../index.html">Home ↑</a>
+      </div>
+    </div>
+  </div>
+</footer>
+<script src="../scripts/portfolio.js?v=3"></script>
+</body>
+</html>

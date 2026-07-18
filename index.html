@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Christian De Asis — Backend Developer</title>
-<meta name="description" content="Backend developer building production systems: webhook pipelines, job queues, state machines, payments. Five products built end-to-end, AI-accelerated and hand-verified.">
+<meta name="description" content="Backend developer building production systems: webhook pipelines, job queues, state machines, payments. Seven products built end-to-end, AI-accelerated and hand-verified.">
 <meta name="author" content="Christian De Asis">
 <meta property="og:title" content="Christian De Asis — Backend Developer">
 <meta property="og:description" content="Production systems, shipped fast. Webhook pipelines, job queues, state machines, payments. AI-accelerated, hand-verified.">
@@ -157,7 +157,7 @@
         <span class="kicker">Selected work</span>
         <h2 style="margin-top:1rem">Systems I designed, built, and verified.</h2>
       </div>
-      <p class="lead" style="max-width:34ch">Five real builds: webhook pipelines, realtime sync, payments, RAG. Each taken end-to-end from data model to interface.</p>
+      <p class="lead" style="max-width:34ch">Seven real builds: webhook pipelines, exact-money engines, realtime sync, payments, RAG. Each taken end-to-end from data model to interface.</p>
     </div>
 
     <div class="projects-list">
@@ -190,6 +190,70 @@
           </div>
           <div class="project-actions">
             <a href="work/dunly-dunning.html" class="link-arrow">Read case study <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Snowball -->
+      <article class="project" data-reveal>
+        <div class="project-body">
+          <span class="project-index">Personal Finance · Backend</span>
+          <h3>Snowball</h3>
+          <p class="project-desc">A local-first Windows tray app that plans debt payoff one payday at a time. A pure-function projection engine with Decimal-exact money re-solves the whole plan from real balances after every logged payment, so plan and reality can't drift.</p>
+          <div class="project-meta">
+            <div class="metric"><span class="val">159/159</span><span class="lbl">Tests passing</span></div>
+            <div class="metric"><span class="val">Centavo-exact</span><span class="lbl">Money math, no floats</span></div>
+            <div class="metric"><span class="val">Re-solve</span><span class="lbl">Never reconcile</span></div>
+          </div>
+          <div class="project-stack">
+            <span class="chip"><span class="chip-dot"></span>Python</span>
+            <span class="chip">FastAPI</span>
+            <span class="chip">SQLite</span>
+            <span class="chip">APScheduler</span>
+          </div>
+          <div class="project-actions">
+            <a href="work/snowball.html" class="link-arrow">Read case study <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></a>
+          </div>
+        </div>
+        <a href="work/snowball.html" class="project-media" aria-label="Open Snowball case study">
+          <div class="mockup">
+            <div class="mockup-bar"><i></i><i></i><i></i><span class="url">snowball · 127.0.0.1</span></div>
+            <div class="mockup-canvas has-shot">
+              <img class="shot" src="screens/snowball-card.png" alt="Snowball calendar: July grid with payday chip, paid checkmarks, today ring and due chips" loading="lazy" width="1600" height="1100">
+              <span class="shot-badge">fictional data</span>
+            </div>
+          </div>
+        </a>
+      </article>
+
+      <!-- Limitboard -->
+      <article class="project flip" data-reveal>
+        <a href="work/limitboard.html" class="project-media" aria-label="Open Limitboard case study">
+          <div class="mockup">
+            <div class="mockup-bar"><i></i><i></i><i></i><span class="url">limitboard · desktop</span></div>
+            <div class="mockup-canvas has-shot">
+              <img class="shot" src="screens/limitboard-card.png" alt="Limitboard: live usage gauges for Claude Code and OpenRouter, with a degraded Codex card showing its retry countdown" loading="lazy" width="1600" height="1100">
+              <span class="shot-badge">live capture</span>
+            </div>
+          </div>
+        </a>
+        <div class="project-body">
+          <span class="project-index">Dev Tooling · Desktop</span>
+          <h3>Limitboard</h3>
+          <p class="project-desc">A Windows-native usage-limit board for agentic coding CLIs: Claude Code, Codex, OpenRouter. A Rust core reads each CLI's own credentials read-only; drift-tolerant adapters degrade to stale-with-age instead of blanking when undocumented endpoints misbehave.</p>
+          <div class="project-meta">
+            <div class="metric"><span class="val">46/46</span><span class="lbl">Tests passing</span></div>
+            <div class="metric"><span class="val">6</span><span class="lbl">CLIs auto-detected</span></div>
+            <div class="metric"><span class="val">0</span><span class="lbl">Bytes off-machine</span></div>
+          </div>
+          <div class="project-stack">
+            <span class="chip"><span class="chip-dot"></span>Tauri</span>
+            <span class="chip">Rust</span>
+            <span class="chip">Vue 3</span>
+            <span class="chip">TypeScript</span>
+          </div>
+          <div class="project-actions">
+            <a href="work/limitboard.html" class="link-arrow">Read case study <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></a>
           </div>
         </div>
       </article>
@@ -501,10 +565,10 @@
       <div class="about-copy" data-reveal style="--reveal-delay:.1s">
         <span class="kicker">About</span>
         <h2 style="margin:1rem 0 1.4rem;font-size:var(--fs-2xl)">The parts users never see are the parts I care about most.</h2>
-        <p>I'm Christian, a self-taught developer who learned backend the honest way: by building five products end-to-end and owning every failure mode myself. Somewhere between a double-fired webhook and a race condition, I found the work I like best — designing systems that stay correct when the real world misbehaves.</p>
+        <p>I'm Christian, a self-taught developer who learned backend the honest way: by building seven products end-to-end and owning every failure mode myself. Somewhere between a double-fired webhook and a race condition, I found the work I like best — designing systems that stay correct when the real world misbehaves.</p>
         <p>AI tooling is my accelerator, not my autopilot. It writes boilerplate at machine speed; I own the data model, the state machines, and the verification. That trade is how a solo builder ships production-grade systems in weeks instead of quarters.</p>
         <div class="stats-row" data-reveal>
-          <div class="stat-cell"><span class="big"><span data-count="5">0</span></span><span class="cap">Products built end-to-end</span></div>
+          <div class="stat-cell"><span class="big"><span data-count="7">0</span></span><span class="cap">Products built end-to-end</span></div>
           <div class="stat-cell"><span class="big"><span data-count="3">0</span>+</span><span class="cap">Years building &amp; shipping</span></div>
           <div class="stat-cell"><span class="big">100<span style="font-size:.6em">%</span></span><span class="cap">Hands-on the craft</span></div>
         </div>
